@@ -9,5 +9,24 @@ class CreateUsers < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+
+    create_table :events do |t|
+      t.text :behavior
+      t.text :trigger
+      t.integer :before
+      t.text :before_notes
+      t.integer :after
+      t.text :after_notes
+      t.boolean :distraction
+      t.boolean :soothing
+      t.boolean :improving
+      t.text :helpful
+      t.text :hurtful
+      t.text :reflection
+      t.text :victory
+
+      t.timestamps
+    end
+    add_reference :events, :user, foreign_key: true
   end
 end
