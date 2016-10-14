@@ -18,8 +18,7 @@ Rails.application.routes.draw do
 
   delete '/users/:id', to: 'users#destroy'
 
-  get '/users/:user_id/events', to: 'events#index', as: 'events'
-  get '/users/:user_id/events/:id', to: 'events#show', as: 'event'
+  get '/events/:id', to: 'events#show', as: 'event'
   get '/users/:user_id/events/new', to: 'events#new', as: 'new_event'
   post '/users/:user_id/events', to: 'events#create'
 
