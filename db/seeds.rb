@@ -26,7 +26,7 @@ users = User.create([
   {
     first_name: "Sam",
     last_name: "Darbonne",
-    user_name: "SDarbonne",
+    user_name: "SmamHamwich",
     email: "samdarbonne@example.com",
     password: "password"
   },
