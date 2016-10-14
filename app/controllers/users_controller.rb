@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
+<<<<<<< HEAD
     @user = User.new(user_params)
     if @user.save
       login @user
@@ -16,6 +17,10 @@ class UsersController < ApplicationController
       flash[:error] = @user.errors.full_messages
       redirect_to new_user_path
     end
+=======
+    @user = User.create(user_params)
+    redirect_to @user
+>>>>>>> 276cd27540703369927948a2208deb924279b1a3
   end
 
   def show
