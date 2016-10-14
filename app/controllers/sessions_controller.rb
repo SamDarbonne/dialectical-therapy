@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
   def new
       @user = User.new
-      render :new
-    end
+      # render :new
+  end
 
   def create
     user_params = params.require(:user).permit(:email, :password)
@@ -10,12 +10,12 @@ class SessionsController < ApplicationController
     @user = User.confirm(user_params)
     if @user
       login(@user)
-
       flash[:notice] = "Successfully logged in as #{@user.name}!"
-      redirect_to @user
+      redirect_to user_path
     else
       flash[:error] = "User Name and Password do not match"
       redirect_to login_path
+    end
   end
 
   def destroy
