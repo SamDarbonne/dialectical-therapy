@@ -1,0 +1,2 @@
+class Johnny < ApplicationRecord
+end
