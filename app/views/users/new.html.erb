@@ -1,7 +1,10 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<%= simple_form_for @user do |f| %>
-  <%= f.input :user_name %>
-  <%= f.input :password %>
-  <%= f.button :submit %>
-<% end %>
+
+<div class="container">
+	<div class="form-box">
+		<%= simple_form_for @user do |f| %>
+		  <%= f.input :user_name, :as => :string %>
+		  <%= f.input :password %>
+		  <%= f.button :submit %>
+		<% end %>
+	</div>
+</div>
