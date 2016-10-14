@@ -1,2 +1,0 @@
-class Johnny < ApplicationRecord
-end
