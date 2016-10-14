@@ -1,51 +1,54 @@
 <%= simple_form_for @event, url: create_event_path, as: 'user_event' do |f| %>
 
 <div class='new_event_form container'>
-  <div class='page_one_wrapper row'>
-    <div class='form_one col-m6 offset-m3'>
-      <%= f.input :trigger, label: 'What was the prompting event?', placeholder: 'What happened right before? What may have been the trigger?' %>
-      <%= f.input :behavior, label: 'Describe what happened.', placeholder: 'What was your reaction? What did you do? What was the behavior?' %>
+  <div class='wrapper row'>
+    <div class='col-m8 offset-m2'>
+      <div class='form_one row'>
+        <div class='col-m4 offset-m2'>
+          <%= f.input :trigger, label: 'What was the prompting event?', placeholder: 'What happened right before? What may have been the trigger?' %>
+          <%= f.input :behavior, label: 'Describe what happened.', placeholder: 'What was your reaction? What did you do? What was the behavior?' %>
+        </div>
+        <div class='back_next_buttons'>
+          <%= f.button :button, 'Back' %>
+          <%= f.button :button, 'Next' %>
+        </div>
+      </div>
+    <div class='form_two row'>
+      <div class='col-m4 offset-m2'>
+        <%= f.input :before, as: :radio_buttons, label: 'How did you feel right before?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
+        <%= f.input :before_notes, label: 'Describe the intensity of your feelings.', placeholder: '(optional)' %><br>
+        <%= f.input :after, as: :radio_buttons, label: 'How do you feel now?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
+        <%= f.input :after_notes, label: 'Describe how your feelings changed.', placeholder: '(optional)' %>
+      </div>
+      <div class='back_next_buttons'>
+        <%= f.button :button, 'Back' %>
+        <%= f.button :button, 'Next' %>
+      </div>
     </div>
-    <div class='back_next_buttons'>
-      <%= f.button :button, 'Back' %>
-      <%= f.button :button, 'Next' %>
+    <div class='form_three row'>
+      <div class='col-m4 offset-m2'>
+        <%= f.input :distraction, as: :check_boxes, label: 'Needed a Distraction', collection: ['']%>
+        <%= f.input :soothing, as: :check_boxes, label: 'Self-Soothing', collection: ['']%>
+        <%= f.input :improving, as: :check_boxes, label: 'Improving the Moment', collection: ['']%>
+        <%= f.input :helpful, label: 'How did the behavior help you?' %>
+        <%= f.input :hurtful, label: 'How did the behavior hurt you?' %>
+      </div>
+      <div class='back_next_buttons'>
+        <%= f.button :button, 'Back' %>
+        <%= f.button :button, 'Next' %>
+      </div>
     </div>
-  </div>
-  <div class='page_two_wrapper row'>
-    <div class='form_two col-m6 offset-m3'>
-      <%= f.input :before, as: :radio_buttons, label: 'How did you feel right before?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
-      <%= f.input :before_notes, label: 'Describe the intensity of your feelings.', placeholder: '(optional)' %><br>
-      <%= f.input :after, as: :radio_buttons, label: 'How do you feel now?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
-      <%= f.input :after_notes, label: 'Describe how your feelings changed.', placeholder: '(optional)' %>
-    </div>
-    <div class='back_next_buttons'>
-      <%= f.button :button, 'Back' %>
-      <%= f.button :button, 'Next' %>
-    </div>
-  </div>
-  <div class='page_three_wrapper row'>
-    <div class='form_three col-m6 offset-m3'>
-      <%= f.input :distraction, as: :check_boxes, label: 'Needed a Distraction', collection: ['']%>
-      <%= f.input :soothing, as: :check_boxes, label: 'Self-Soothing', collection: ['']%>
-      <%= f.input :improving, as: :check_boxes, label: 'Improving the Moment', collection: ['']%>
-      <%= f.input :helpful, label: 'How did the behavior help you?' %>
-      <%= f.input :hurtful, label: 'How did the behavior hurt you?' %>
-    </div>
-    <div class='back_next_buttons'>
-      <%= f.button :button, 'Back' %>
-      <%= f.button :button, 'Next' %>
-    </div>
-  </div>
-  <div class='page_four_wrapper row'>
-    <div class='form_four col-m6 offset-m3'>
-      <%= f.input :reflection, label: 'What could you have done differently?', placeholder: 'Reflect on what you would want to do next time.' %>
-      <%= f.input :victory, label: 'What are you proud of?', placeholder: 'Claim your victories!' %>
-    </div>
-    <div class='back_next_buttons'>
-      <%= f.button :button, 'Back' %>
-    </div>
-    <div class='save_button'>
-      <%= f.submit 'Save' %>
+    <div class='page_four row'>
+      <div class='form_four col-m4 offset-m2'>
+        <%= f.input :reflection, label: 'What could you have done differently?', placeholder: 'Reflect on what you would want to do next time.' %>
+        <%= f.input :victory, label: 'What are you proud of?', placeholder: 'Claim your victories!' %>
+      </div>
+      <div class='back_next_buttons'>
+        <%= f.button :button, 'Back' %>
+      </div>
+      <div class='save_button'>
+        <%= f.submit 'Save' %>
+      </div>
     </div>
   </div>
 </div>
