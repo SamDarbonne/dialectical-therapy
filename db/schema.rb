@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014180943) do
+ActiveRecord::Schema.define(version: 20161014192228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.text     "behavior"
+    t.text     "trigger"
+    t.integer  "before"
+    t.text     "before_notes"
+    t.integer  "after"
+    t.text     "after_notes"
+    t.boolean  "distraction"
+    t.boolean  "soothing"
+    t.boolean  "improving"
+    t.text     "helpful"
+    t.text     "hurtful"
+    t.text     "reflection"
+    t.text     "victory"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_events_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.text     "user_name"
@@ -25,4 +45,5 @@ ActiveRecord::Schema.define(version: 20161014180943) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "events", "users"
 end
