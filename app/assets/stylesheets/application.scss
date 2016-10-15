@@ -1,4 +1,5 @@
-@import "materialize"
+@import "materialize";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -14,3 +15,17 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	background-color: purple;
+}
+
+.form-box {
+	margin: 100px auto;
+	padding: 50px;
+	background-color: white;
+}
+
+.white-tainer {
+	background-color: white;
+}

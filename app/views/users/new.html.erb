@@ -1,13 +1,15 @@
 
-<div class="container">
+<div class="container white-tainer">
+<div class="white-tainer">
 	<div class="form-box">
 		<%= simple_form_for @user do |f| %>
-			<%= f.input :email, :as => :string, :type => :email  %>
-		  <%= f.input :first_name, :as => :string %>
-			<%= f.input :last_name, :as => :string %>
-			<%= f.input :user_name, :as => :string %>
-		  <%= f.input :password %>
-		  <%= f.button :submit %>
+		<%= f.input :email, :as => :string, :type => :email  %>
+		<%= f.input :first_name, :as => :string %>
+		<%= f.input :last_name, :as => :string %>
+		<%= f.input :user_name, :as => :string %>
+		<%= f.input :password %>
+		<%= f.button :submit %>
 		<% end %>
 	</div>
+</div>
 </div>
