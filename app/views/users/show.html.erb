@@ -1,5 +1,6 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
 <%= @user.user_name %>
 
 <!-- See all of a users' events -->
@@ -7,8 +8,7 @@
   <ul>
     <% for event in @events %>
     <li>
-    	<p><%= link_to event.created_at, '/events/' + event.id.to_s %></p>
-      <p><%= event.created_at %></p>
+    	<p><%= link_to event.created_at, '/users/' + @user.id.to_s + '/events/' + event.id.to_s %></p>
     </li>
     <hr>
     <% end %>

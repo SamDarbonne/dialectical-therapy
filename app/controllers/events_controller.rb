@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  
+
   def index
     @event = Event.all
   end
@@ -21,28 +21,27 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @event = Event.find_by_id(params[:event_id])
+    @event = Event.find_by_id(params[:id])
   end
 
   def update
-    @event = Event.find_by_id(params[:event_id])
+    @event = Event.find_by_id(params[:id])
     if @event.update(event_params)
       redirect_to user_path
+    end
   end
 
   def destroy
-    @event = Event.find(params[:event_id])
+    @event = Event.find(params[:id])
     @event.destroy
     redirect_to user_path
   end
 
   private
-
-    def event_params
-      event_info = params.require(:event).permit(:behavior, :trigger, :before, :before_notes, :after, :after_notes, :distraction, :soothing, :improving, :helpful, :hurtful, :reflection, :victory)
-      event_params = event_info.merge({user_id: (params[:user_id])})
-    end
-    
+  def event_params
+    event_info = params.require(:event).permit(:behavior, :trigger, :before, :before_notes, :after, :after_notes, :distraction, :soothing, :improving, :helpful, :hurtful, :reflection, :victory)
+    event_params = event_info.merge({user_id: (params[:user_id])})
   end
+
 
 end
