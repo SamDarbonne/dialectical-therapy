@@ -12,5 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
+//= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).on(function(){	
+	console.log("js working in application.js!")
+    $('#one-btn').click(function(){
+    	$('#tab-one').removeClass('active');
+    	$('#tab-two').hasClass('active');
+    });
+  });
+
+
+ $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
