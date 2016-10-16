@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if @user
       login(@user)
       flash[:notice] = "Successfully logged in as #{@user.user_name}!"
-      redirect_to @user
+      redirect_to '/users/' + @user.user_name
     else
       puts 'error'
       flash[:error] = "User Name and Password do not match"
