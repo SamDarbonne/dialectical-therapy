@@ -18,9 +18,9 @@
 //= require_tree .
 
 
-$(document).ready(function() {
-	$('#welcome-sign-in-button').on('click', function() {
-		$('#welcome-home-box').toggleClass('hidden');
-		$('#welcom-sign-in-box').toggleClass('hidden')
+jQuery(document).ready(function() {
+	jQuery('#welcome-sign-in-button').on('click', function() {
+		jQuery('#welcome-home-box').toggleClass('hidden');
+		jQuery('#welcom-sign-in-box').toggleClass('hidden')
 	})
 })
