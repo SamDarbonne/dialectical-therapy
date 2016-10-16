@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function() {
+	$('#welcome-sign-in-button').on('click', function() {
+		$('#welcome-home-box').toggleClass('hidden');
+		$('#welcom-sign-in-box').toggleClass('hidden')
+	})
+})

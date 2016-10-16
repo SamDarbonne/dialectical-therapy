@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Event.destroy_all
 
 users = User.create([
   {
@@ -37,3 +38,22 @@ users = User.create([
     password: "password"
   }
 ])
+
+events = Event.create([
+  {
+    behavior: "binged and purged",
+    trigger: "arguement with boyfriend",
+    before: 8,
+    before_notes: "i was scared",
+    after: 9,
+    after_notes: "i was ashamed",
+    distraction: false,
+    soothing: true,
+    improving: false,
+    helpful: "i calmed down",
+    hurtful: "i felt worse about myself after",
+    reflection: "i wish i took a walk after the argument instead",
+    victory: "i told my boyfriend how i felt",
+    user_id: 1
+  }
+  ])
