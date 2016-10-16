@@ -18,9 +18,13 @@
  */
 
 body {
-	background-color: purple;
+	background-image: url("http://imgur.com/a/itE8G")
 }
 
+.aside-image {
+	height: 100vh;
+	width: 100vw;
+}
 .form-box {
 	margin: 100px auto;
 	padding: 50px;
@@ -29,4 +33,25 @@ body {
 
 .white-tainer {
 	background-color: white;
+}
+
+.centered {
+	text-align: center
+}
+
+section {
+  float: right;
+  width: 63%;
+  height: 100vh;
+  background-color: rgba(136,118,168, 0.95)
+}
+aside {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-image: url("http://imgur.com/a/itE8G")
+}
+
+.hidden {
+	display: none
 }

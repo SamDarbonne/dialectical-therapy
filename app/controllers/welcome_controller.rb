@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
 		if current_user
 			@user = current_user
 		end
+		@user = User.new
 	end
 
 end
