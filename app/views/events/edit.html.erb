@@ -1,6 +1,6 @@
 <form class='entire_form'>
   <div class="container">
-    <%= simple_form_for @event, url: "/users/" + @user.id.to_s + "/events", method: 'post' do |f| %>
+    <%= simple_form_for @event, url: '/users/' + @user.id.to_s + '/events' + @event.id.to_s %>
 
       <div class="row">
       <!-- Tabs  -->

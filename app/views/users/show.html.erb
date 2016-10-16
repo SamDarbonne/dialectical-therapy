@@ -1,3 +1,16 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 <%= @user.user_name %>
+
+<!-- See all of a users' events -->
+<div id="events-container" class="col s6">
+  <ul>
+    <% for event in @events %>
+    <li>
+    	<p><%= link_to event.created_at, '/events/' + event.id.to_s %></p>
+      <p><%= event.created_at %></p>
+    </li>
+    <hr>
+    <% end %>
+  </ul>
+</div>
