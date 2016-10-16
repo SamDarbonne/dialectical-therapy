@@ -16,7 +16,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+console.log('application.js loaded')
 
 jQuery(document).ready(function() {
 	jQuery('#welcome-sign-in-button').on('click', function() {
