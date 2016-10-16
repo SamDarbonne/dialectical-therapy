@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'welcome#index'
+  root to: 'welcome#home'
 
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   get '/users/new', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'
   get '/users/:id', to: 'users#show', as: 'user'
-  get '/users/:id/edit', to: 'users#edit', as: 'edit_user'
+  get '/users/:user_name/edit', to: 'users#edit', as: 'edit_user'
   patch '/users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy'
 
   get '/events/:id', to: 'events#show', as: 'event'
   get '/users/:user_id/events/new', to: 'events#new', as: 'new_event'
-  post '/users/:user_id/events', to: 'events#create'
+  post '/users/:user_id/events', to: 'events#create', as: 'create_event'
 
 end
