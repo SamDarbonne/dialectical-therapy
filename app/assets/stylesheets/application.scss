@@ -13,6 +13,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require animate
  */
 
 #navbar {
@@ -21,6 +22,35 @@
 
 nav a{
   color: white;
+$primary-color: rgba(136,118,168, 0.95);
+$secondary-color: rgba(196,178,228, 0.95);
+
+.number-box {
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.number-box-reversed {
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: $secondary-color;
+  color: $primary-color;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.number-selection {
+	padding: 0 -5px;
+	width: 1rem
 }
 
 body {
@@ -33,7 +63,7 @@ body {
 	width: 100vw;
 }
 .form-box {
-	margin: 100px auto;
+	margin: 10vh auto;
 	padding: 50px;
 	background-color: white;
 }
