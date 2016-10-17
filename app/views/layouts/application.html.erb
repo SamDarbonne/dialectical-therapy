@@ -37,9 +37,13 @@
       </div>
     </nav>
     <% flash.each do |_key, msg| %>
-    <script type="text/javascript">
-      Materialize.toast('<%= msg %>', 4000)
-    </script>
+      <% iterator = 0 %>
+      <% msg.each do |text| %>
+        <script type="text/javascript">
+          Materialize.toast('<%= text %>', 4000)
+        </script>
+        <% iterator += 1 %>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>
