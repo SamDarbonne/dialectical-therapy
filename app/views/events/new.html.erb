@@ -1,5 +1,8 @@
-<%= simple_form_for @event, url: create_event_path, as: 'user_event' do |f| %>
+<aside>
+  <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
+</aside>
 <section>
+<%= simple_form_for @event, url: create_event_path, as: 'user_event' do |f| %>
 <form class='entire_form'>
   <div class='new_event_form container'>
     <div class='wrapper row'>
@@ -10,19 +13,41 @@
             <%= f.input :behavior, label: 'Describe what happened.', placeholder: 'What was your reaction? What did you do? What was the behavior?' %>
           </div>
           <div class='back_next_buttons'>
-            <button id="form-one-next" class="btn">Next</button>
+            <button id="form-one-next" class="btn deep-purple lighten-2 deep-purple lighten-2">Next</button>
           </div>
         </div>
       <div class='form_two row form-box hidden' id="form-two">
         <div class='col-m4 offset-m2'>
-          <%= f.input :before, as: :radio_buttons, label: 'How did you feel right before?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
+          <label>How did you feel before?</label><br>
+          <a href="" class="disabled before-feeling" id="before-1"><div class="number-box">1</div></a>
+          <a href="" class="disabled before-feeling" id="before-2"><div class="number-box">2</div></a>
+          <a href="" class="disabled before-feeling" id="before-3"><div class="number-box">3</div></a>
+          <a href="" class="disabled before-feeling" id="before-4"><div class="number-box">4</div></a>
+          <a href="" class="disabled before-feeling" id="before-5"><div class="number-box">5</div></a>
+          <a href="" class="disabled before-feeling" id="before-6"><div class="number-box">6</div></a>
+          <a href="" class="disabled before-feeling" id="before-7"><div class="number-box">7</div></a>
+          <a href="" class="disabled before-feeling" id="before-8"><div class="number-box">8</div></a>
+          <a href="" class="disabled before-feeling" id="before-9"><div class="number-box">9</div></a>
+          <a href="" class="disabled before-feeling" id="before-10"><div class="number-box">10</div></a>
+          <%= f.input :before, :as => :hidden, :input_html => { :value => 1, :class => 'before-input' } %>
           <%= f.input :before_notes, label: 'Describe the intensity of your feelings.', placeholder: '(optional)' %><br>
-          <%= f.input :after, as: :radio_buttons, label: 'How do you feel now?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
+          <label>How did you feel before?</label><br>
+          <a href="" class="disabled after-feeling" id="after-1"><div class="number-box">1</div></a>
+          <a href="" class="disabled after-feeling" id="after-2"><div class="number-box">2</div></a>
+          <a href="" class="disabled after-feeling" id="after-3"><div class="number-box">3</div></a>
+          <a href="" class="disabled after-feeling" id="after-4"><div class="number-box">4</div></a>
+          <a href="" class="disabled after-feeling" id="after-5"><div class="number-box">5</div></a>
+          <a href="" class="disabled after-feeling" id="after-6"><div class="number-box">6</div></a>
+          <a href="" class="disabled after-feeling" id="after-7"><div class="number-box">7</div></a>
+          <a href="" class="disabled after-feeling" id="after-8"><div class="number-box">8</div></a>
+          <a href="" class="disabled after-feeling" id="after-9"><div class="number-box">9</div></a>
+          <a href="" class="disabled after-feeling" id="after-10"><div class="number-box">10</div></a>
+          <%= f.input :after, :as => :hidden, :input_html => { :value => 1, :class => 'after-input' } %>
           <%= f.input :after_notes, label: 'Describe how your feelings changed.', placeholder: '(optional)' %>
         </div>
         <div class='back_next_buttons'>
-            <button id="form-two-back" class="btn">Back</button>
-            <button id="form-two-next" class="btn">Next</button>
+            <button id="form-two-back" class="btn deep-purple lighten-2">Back</button>
+            <button id="form-two-next" class="btn deep-purple lighten-2">Next</button>
         </div>
       </div>
       <div class='form_three row form-box hidden' id="form-three">
@@ -34,8 +59,8 @@
           <%= f.input :hurtful, label: 'How did the behavior hurt you?' %>
         </div>
         <div class='back_next_buttons'>
-            <button id="form-three-back" class="btn">Back</button>
-            <button id="form-three-next" class="btn">Next</button>
+            <button id="form-three-back" class="btn deep-purple lighten-2">Back</button>
+            <button id="form-three-next" class="btn deep-purple lighten-2">Next</button>
         </div>
       </div>
       <div class='page_four row form-box hidden' id="form-four">
@@ -44,10 +69,8 @@
           <%= f.input :victory, label: 'What are you proud of?', placeholder: 'Claim your victories!' %>
         </div>
         <div class='back_next_buttons'>
-            <button id="form-four-back" class="btn">Back</button>
-        </div>
-        <div class='save_button'>
-          <%= f.submit 'Save' %>
+            <button id="form-four-back" class="btn deep-purple lighten-2">Back</button>
+            <button id="form-save-button" class="btn deep-purple lighten-2">Save</button>
         </div>
       </div>
     </div>
