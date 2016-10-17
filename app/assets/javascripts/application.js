@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require materialize-sprockets
 //= require ahoy
 //= require jquery_ujs
 //= require jquery.turbolinks
@@ -19,6 +18,12 @@
 //= require_tree .
 
 
-console.log('application.js loaded! Huzzah!')
+$(document).on('turbolinks:load',function() {
+	$('#welcome-sign-in-button').on('click', function() {
+		$('#welcome-home-box').toggleClass('hidden');
+		$('#welcom-sign-in-box').toggleClass('hidden')
+	})
+})
 
+console.log('application.js loaded! Huzzah!')
 

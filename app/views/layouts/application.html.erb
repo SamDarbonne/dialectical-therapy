@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Formopoly</title>
-  
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,8 +16,30 @@
   </head>
 
   <body>
-    <% flash.each do |name, msg| %>
-    <%= msg %>
+
+    <nav class="top-nav" id="navbar">
+      <div class="nav-wrapper">
+        <% if current_user %>
+        <%= link_to "Formopoly", '/', class: "brand-logo" %>
+        <% else %>
+          <%= link_to "Formopoly", root_path, class: "brand-logo" %>
+          <% end %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if current_user %>
+            <li><%= link_to "Profile", user_path(current_user.user_name)%></li>
+
+            <li><%= link_to "Log Out", logout_path, class:"last-nav" %></li>
+          <% else %>
+            <li><%= link_to "Create Account", new_user_path %></li>
+            <li><%= link_to "Log In", login_path, class:"last-nav" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <% flash.each do |_key, msg| %>
+    <script type="text/javascript">
+      Materialize.toast('<%= msg %>', 4000)
+    </script>
     <% end %>
     <%= yield %>
   </body>
