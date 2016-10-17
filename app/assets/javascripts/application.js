@@ -18,11 +18,3 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
-
-$(document).on(function(){	
-	console.log("js working in application.js!")
-    $('#one-btn').click(function(){
-    	$('#tab-one').removeClass('active');
-    	$('#tab-two').hasClass('active');
-    });
-  });
