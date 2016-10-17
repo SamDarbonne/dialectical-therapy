@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
     @users = User.all
   end
@@ -16,11 +17,11 @@ class UsersController < ApplicationController
       flash[:error] = @user.errors.full_messages
       redirect_to new_user_path
     end
-
   end
 
   def show
     @user = User.find_by_id(params[:id])
+    @events = @user.events
   end
 
   def edit
@@ -45,4 +46,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:user_name, :first_name, :last_name, :email, :password)
   end
+
 end

@@ -12,7 +12,11 @@
 //
 //= require jquery
 
+//= require materialize-sprockets
+//= require ahoy
 //= require jquery_ujs
+//= require jquery.turbolinks
+//= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
 
@@ -23,3 +27,11 @@ $(document).ready(function() {
 		$('#welcom-sign-in-box').toggleClass('hidden')
 	})
 })
+
+$(document).on(function(){
+	console.log("js working in application.js!")
+    $('#one-btn').click(function(){
+    	$('#tab-one').removeClass('active');
+    	$('#tab-two').hasClass('active');
+    });
+  });

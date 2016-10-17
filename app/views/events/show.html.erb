@@ -1,1 +1,26 @@
 We are showing one event!
+<div class="event-buttons">
+	<a class="waves-effect waves-light btn"><%= button_to 'Edit Post', edit_event_path(@event), method: :get %></a>
+
+	<a class="waves-effect waves-light btn"><%= button_to 'Delete Post', event_path(@event), method: :delete, data: {confirm: 'Are you sure you want to delete this post?' }%></a>
+</div>
+<div>
+	<p><%= @event.created_at %></p>
+	<p><%= @event.updated_at %></p>
+</div>
+<div>
+	<p><%= @event.behavior %></p>
+	<p><%= @event.trigger %></p>
+	<p><%= @event.before %></p>
+	<p><%= @event.before_notes %></p>
+	<p><%= @event.after %></p>
+	<p><%= @event.after_notes %></p>
+	<p><%= @event.distraction %></p>
+	<p><%= @event.soothing %></p>
+	<p><%= @event.improving %></p>
+	<p><%= @event.helpful %></p>
+	<p><%= @event.hurtful %></p>
+	<p><%= @event.reflection %></p>
+	<p><%= @event.victory %></p>
+</div>
+
