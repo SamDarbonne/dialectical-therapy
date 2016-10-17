@@ -11,15 +11,20 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- @import "materialize"
  *= require_tree .
  *= require_self
  */
 
-nav {
-  background-color: gray;
+#navbar {
+  background-color: #6c6c69;
+}
+
+nav a{
+  color: white;
+}
+
 body {
-	background-image: url("http://imgur.com/a/itE8G")
+	background-image: url("http://imgur.com/a/itE8G");
 }
 
 .aside-image {
@@ -37,22 +42,22 @@ body {
 }
 
 .centered {
-	text-align: center
+	text-align: center;
 }
 
 section {
   float: right;
   width: 63%;
   height: 100vh;
-  background-color: rgba(136,118,168, 0.95)
+  background-color: rgba(136,118,168, 0.95);
 }
 aside {
   float: left;
   width: 30%;
   height: 100%;
-  background-image: url("http://imgur.com/a/itE8G")
+  background-image: url("http://imgur.com/a/itE8G");
 }
 
 .hidden {
-	display: none
+	display: none;
 }

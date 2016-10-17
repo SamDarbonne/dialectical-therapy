@@ -1,15 +1,17 @@
 
 <div class="container">
-<div class="white-tainer">
-	<div class="form-box">
-		<%= simple_form_for @user do |f| %>
-		  <%= f.input :first_name, :as => :string %>
-			<%= f.input :last_name, :as => :string %>
-			<%= f.input :user_name, :as => :string %>
-			<%= f.input :email, :as => :string, :type => :email  %>
-		  <%= f.input :password %>
-		  <%= f.button :submit %>
-		<% end %>
+	<div class="white-tainer">
+		<div class="form-box">
+			<h2>New User</h2>
+			<br>
+			<%= simple_form_for @user do |f| %>
+			  <%= f.input :first_name, :as => :string %>
+				<%= f.input :last_name, :as => :string %>
+				<%= f.input :user_name, :as => :string %>
+				<%= f.input :email, :as => :string, :type => :email  %>
+			  <%= f.input :password %>
+			  <%= f.button :submit %>
+			<% end %>
+		</div>
 	</div>
-</div>
 </div>
