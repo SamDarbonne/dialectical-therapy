@@ -16,9 +16,9 @@
 	          <% for event in @events %>
 	            <li id="event-lists">
 	              <p>
-	                <%= link_to event.created_at.strftime("%b. %d %Y"), '/users/' + @user.user_name + '/events/' + event.id.to_s %><br>
-									<p>Triggering Event: <%= event.trigger %><br>
-									<%= event.behavior %>
+	                <%= link_to event.created_at.strftime("%b. %d, %Y"), '/users/' + @user.user_name + '/events/' + event.id.to_s %><br>
+									Triggering Event: <%= truncate(event.trigger) %><br>
+									Behavior: <%= truncate(event.behavior) %>
 								</p>
 	            </li>
 	            <hr>
