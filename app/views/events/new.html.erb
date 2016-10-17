@@ -1,9 +1,20 @@
+
 <aside>
   <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
 </aside>
 <section>
-<%= simple_form_for @event, url: create_event_path, as: 'user_event' do |f| %>
-<form class='entire_form'>
+<%= simple_form_for @event, url: "/users/", method: 'post' do |f| %>
+    <!-- Tabs  -->
+      <div class="col s12">
+          <ul class="tabs">
+              <li class="tab col m3 s12"><a class="blue-text active" id="tab-one" href="#form_one">Part 1</a></li>
+              <li class="tab col m3 s12"><a class="blue-text" id="tab-two" href="#form_two">Part 2</a></li>
+              <li class="tab col m3 s12"><a class="blue-text" id="tab-three" href="#form_three">Part 3</a></li>
+              <li class="tab col m3 s12"><a class="blue-text" id="tab-four" href="#form_four">Part 4</a></li>
+              <div class="indicator blue" style="z-index:1"></div>
+          </ul>
+      </div>
+
   <div class='new_event_form container'>
     <div class='wrapper row'>
       <div class='col-m8 offset-m2'>
@@ -72,11 +83,11 @@
             <button id="form-four-back" class="btn deep-purple lighten-2">Back</button>
             <button id="form-save-button" class="btn deep-purple lighten-2">Save</button>
         </div>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>
-</form>
+
+
 </section>
 
-<% end %>
+
+

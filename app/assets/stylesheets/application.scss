@@ -1,6 +1,9 @@
 
 
-/*
+
+
+/* @import "materialize"
+ *
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -12,7 +15,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- @import "materialize"
  *= require_tree .
  *= require_self
  *= require animate
@@ -22,17 +24,6 @@ $primary-color: rgba(136,118,168, 0.95);
 $secondary-color: rgba(196,178,228, 0.95);
 
 .number-box {
-  text-align: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: $primary-color;
-  color: $secondary-color;
-  display: inline-block;
-  -webkit-user-select: none;       
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-}
-.number-box:hover {
   text-align: center;
   width: 1.5rem;
   height: 1.5rem;
