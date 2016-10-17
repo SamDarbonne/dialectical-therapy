@@ -1,5 +1,5 @@
 <div class="container">
-  <%= simple_form_for @event, url: '/users/' + @user.id.to_s + '/events' + @event.id.to_s %>
+  <%= simple_form_for @event, url: '/users/' + @user.id.to_s + '/events/' + @event.id.to_s do |f|%>
 
     <div class="row">
     <!-- Tabs  -->

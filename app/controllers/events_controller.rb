@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(event_params)
-    redirect_to user_path
+    redirect_to user_path(@event.user)
   end
 
   def show
@@ -24,12 +24,14 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find_by_id(params[:id])
+    user_id = params[:user_id]
+    @user = User.find_by(id: user_id)
   end
 
   def update
     @event = Event.find_by_id(params[:id])
     if @event.update(event_params)
-      redirect_to user_path
+      redirect_to user_path(@event.user)
     end
   end
 
