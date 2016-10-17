@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login @user
-      redirect_to @user
+      redirect_to user_path(@user.user_name)
     else
       flash[:error] =[]
       @user.errors.full_messages.each do |error|
@@ -24,14 +24,25 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(user_name: params[:user_name])
-    @events = @user.events
+    if !current_user
+      redirect_to root_path
+    elsif current_user.id != @user.id
+      redirect_to user_path(current_user.user_name)
+    else
+      @events = @user.events
+    end
 
   end
 
   def edit
-    @user = User.find(params [:id])
+    @user = User.find_by(user_name: params[:user_name])
+    if !current_user
+      redirect_to root_path
+    elsif current_user.id != @user.id
+      redirect_to user_path(current_user.user_name)
+    end
   end
- 
+
   def update
     @user = User.find(params [:id])
     if @user.update(user_params)

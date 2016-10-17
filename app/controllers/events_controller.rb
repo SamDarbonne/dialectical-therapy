@@ -5,9 +5,15 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
-    user_id = params[:user_id]
-    @user = User.find_by(id: user_id)
+  user_name = params[:user_name]
+  @user = User.find_by(user_name: user_name)
+    if !current_user
+      redirect_to root_path
+    elsif @user.id != current_user.id
+      redirect_to user_path(current_user.user_name)
+    else
+      @event = Event.new
+    end
   end
 
   def create
@@ -18,8 +24,8 @@ class EventsController < ApplicationController
   def show
     event_id = params[:id]
     @event = Event.find_by(id: event_id)
-    user_id = params[:user_id]
-    @user = User.find_by(id: user_id)
+    user_name = params[:user_name]
+    @user = User.find_by(user_name: user_name)
   end
 
   def edit

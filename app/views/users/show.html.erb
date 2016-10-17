@@ -3,15 +3,15 @@
 <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
 </aside>
 <section>
-<div class="container">
-	<div class="row">
-		<div class="form-box">
+<div class="container clearfix">
+	<div class="row clearfix">
+		<div class="form-box clearfix">
 			<div id="events-container" class="col s6">
         <ul>
           <% for event in @events %>
             <li>
               <p>
-                <%= link_to event.created_at, '/users/' + @user.id.to_s + '/events/' + event.id.to_s %> 
+                <%= link_to event.created_at, '/users/' + @user.id.to_s + '/events/' + event.id.to_s %>
               </p>
             </li>
             <hr>
