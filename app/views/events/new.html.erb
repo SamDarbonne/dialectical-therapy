@@ -3,7 +3,7 @@
   <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
 </aside>
 <section>
-<%= simple_form_for @event, url: "/users/", method: "post" do |f| %>
+<%= simple_form_for @event, url: '/users/' + @user.user_name + '/events/', method: "post" do |f| %>
     <!-- Tabs  -->
       <div class="col s12">
           <ul class="tabs">
@@ -91,6 +91,3 @@
 
 
 </section>
-
-
-

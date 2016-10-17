@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :events
+  belongs_to :professional, optional: true
 
   validates :first_name, presence: true
   validates :last_name, presence: true
