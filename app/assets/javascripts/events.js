@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   console.log("Ready!");
 	//prevent default behavior for all disabled anchor tags
 	jQuery('.disabled').on('click', function(event) {
@@ -10,7 +10,7 @@ $(document).ready(function(){
 	radioButtons('after-feeling', 'after-input', 17, 26);
 	
 	//list all of our toggle buttons
-	setHiddenToggles('welcome-sign-in-button', 'welcome-home-box', 'welcome-sign-in-box');
+	setHiddenToggles('welcome-sign-in-button', 'welcome-home-box', "welcome-sign-in-box");
 	setHiddenToggles('form-one-next', 'form-one', 'form-two');
 	setHiddenToggles('form-two-next', 'form-two', 'form-three');
 	setHiddenToggles('form-three-next', 'form-three', 'form-four');
@@ -18,10 +18,6 @@ $(document).ready(function(){
 	setHiddenToggles('form-three-back', 'form-three', 'form-two');
 	setHiddenToggles('form-four-back', 'form-four', 'form-three');
 })
-
-function tabClick() {
-	$('#tab-one').addClass('active')
-}
 
 // set the click listener for hiding current form-box and showing the next or previous, for user with
 // next and back buttons
