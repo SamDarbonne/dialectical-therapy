@@ -14,7 +14,10 @@ class UsersController < ApplicationController
       login @user
       redirect_to @user
     else
-      flash[:error] = @user.errors.full_messages
+      flash[:error] =[]
+      @user.errors.full_messages.each do |error|
+        flash[:error] << error.to_s
+      end
       redirect_to new_user_path
     end
   end
