@@ -24,6 +24,5 @@ $(document).on('turbolinks:load',function() {
 		$('#welcom-sign-in-box').toggleClass('hidden')
 	})
 })
-
 console.log('application.js loaded! Huzzah!')
 

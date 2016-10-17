@@ -6,7 +6,7 @@
 
 
 $primary-color: rgba(136,118,168, 0.95);
-$secondary-color: rgba(196,178,228, 0.95);
+$secondary-color: rgba(220,200,250, 0.95);
 
 .number-box {
   text-align: center;
@@ -14,6 +14,7 @@ $secondary-color: rgba(196,178,228, 0.95);
   height: 1.5rem;
   background-color: $primary-color;
   color: $secondary-color;
+  padding: 0.2rem;
   display: inline-block;
   -webkit-user-select: none;       
   -moz-user-select: none; 
@@ -25,8 +26,31 @@ $secondary-color: rgba(196,178,228, 0.95);
   height: 1.5rem;
   background-color: $secondary-color;
   color: $primary-color;
+  padding: 0.2rem;
   display: inline-block;
   -webkit-user-select: none;       
   -moz-user-select: none; 
   -ms-user-select: none;   
+}
+.checkbox {
+  text-align: center;
+  height: 1.5rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 0.1rem 0.5rem;
+  display: inline-block;
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+}
+.checkbox-active {
+  text-align: center;
+  height: 1.5rem;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 0.1rem 0.5rem;
+  display: inline-block;
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none; 
 }

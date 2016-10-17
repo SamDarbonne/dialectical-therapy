@@ -7,11 +7,11 @@
     <!-- Tabs  -->
       <div class="col s12">
           <ul class="tabs">
-              <li class="tab col m3 s12"><a class="disabled blue-text active" id="tab-one" href="#form_one">Part 1</a></li>
-              <li class="tab col m3 s12"><a class="disabled blue-text" id="tab-two" href="#form_two">Part 2</a></li>
-              <li class="tab col m3 s12"><a class="disabled blue-text" id="tab-three" href="#form_three">Part 3</a></li>
-              <li class="tab col m3 s12"><a class="disabled blue-text" id="tab-four" href="#form_four">Part 4</a></li>
-              <div class="indicator blue" style="z-index:1"></div>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text active" id="tab-one" href="#tab-activate-one">Part 1</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-two" href="#tab-activate-two">Part 2</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-three" href="#tab-activate-three">Part 3</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-four" href="#tab-activate-four">Part 4</a></li>
+              <div class="indicator deep-purple lighten-2" style="z-index:1"></div>
           </ul>
       </div>
 
@@ -63,9 +63,12 @@
       </div>
       <div class="form_three row form-box hidden" id="form-three">
         <div class="col-m4 offset-m2">
-          <%= f.input :distraction, as: :check_boxes, label: "Needed a Distraction", collection: [""]%>
-          <%= f.input :soothing, as: :check_boxes, label: "Self-Soothing", collection: [""]%>
-          <%= f.input :improving, as: :check_boxes, label: "Improving the Moment", collection: [""]%>
+          <label>Why did you do what you done did do?</label>
+          <a href="" class="disabled reason-box" id="checkbox-1"><div class="checkbox">Needed a Distraction</div></a>
+          <a href="" class="disabled reason-box" id="checkbox-2"><div class="checkbox">Self-Soothing</div></a>
+          <a href="" class="disabled reason-box" id="checkbox-3"><div class="checkbox">Improving the Moment</div></a>
+          <%= f.input :reason, :as => :hidden, :input_html => { :value => nil, :class => "reason-input" } %>
+          <br><br>
           <%= f.input :helpful, label: "How did the behavior help you?" %>
           <%= f.input :hurtful, label: "How did the behavior hurt you?" %>
         </div>
