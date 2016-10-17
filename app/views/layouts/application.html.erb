@@ -20,7 +20,7 @@
     <nav class="top-nav" id="navbar">
       <div class="nav-wrapper">
         <% if current_user %>
-        <%= link_to "Formopoly", '/', class: "brand-logo" %>
+        <%= link_to "Formopoly", user_path(current_user.user_name), class: "brand-logo" %>
         <% else %>
           <%= link_to "Formopoly", root_path, class: "brand-logo" %>
           <% end %>
@@ -37,9 +37,19 @@
       </div>
     </nav>
     <% flash.each do |_key, msg| %>
-    <script type="text/javascript">
-      Materialize.toast('<%= msg %>', 4000)
-    </script>
+      <% if msg.kind_of?(Array) %>
+        <% iterator = 0 %>
+        <% msg.each do |text| %>
+          <script type="text/javascript">
+            Materialize.toast('<%= text %>', 4000)
+          </script>
+            <% iterator += 1 %>
+          <% end %>
+      <% else %>
+        <script type="text/javascript">
+          Materialize.toast('<%= msg %>', 4000)
+        </script>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>
