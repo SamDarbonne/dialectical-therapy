@@ -1,0 +1,187 @@
+/* line 1, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/form.scss */
+.form-box {
+  margin-top: 200px;
+}
+/* line 1, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 12, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 20, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 24, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 31, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 36, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 40, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 46, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 54, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 71, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 5, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/sessions.scss */
+body {
+  background-color: #8876a8;
+  height: 100%;
+  width: 100%;
+}
+/* line 5, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/users.scss */
+body {
+  background-color: #8876a8;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 11, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/users.scss */
+.form-box {
+  margin: 100px auto;
+  padding: 50px;
+  background-color: white;
+}
+
+/* line 17, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/users.scss */
+.white-tainer {
+  background-color: white;
+}
+/* line 13, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/welcome.scss */
+#landing-aside {
+  height: 200px;
+  width: 200px;
+  background-image: "http://www.gratisography.com/pictures/277_1.jpg";
+}
+/*
+=======
+/* @import "materialize"
+ *
+>>>>>>> 7c63e5d409c6d13116322efe8a234b424e856fbd
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 23, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+#navbar {
+  background-color: #6c6c69;
+}
+
+/* line 27, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+nav a {
+  color: white;
+}
+
+/* line 31, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+body {
+  background-image: url("http://imgur.com/a/itE8G");
+}
+
+/* line 35, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+.aside-image {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* line 39, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+.form-box {
+  margin: 100px auto;
+  padding: 50px;
+  background-color: white;
+}
+
+/* line 45, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+.white-tainer {
+  background-color: white;
+}
+
+/* line 49, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+.centered {
+  text-align: center;
+}
+
+/* line 53, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+section {
+  float: right;
+  width: 63%;
+  height: 100vh;
+  background-color: rgba(136, 118, 168, 0.95);
+}
+
+/* line 59, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+aside {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-image: url("http://imgur.com/a/itE8G");
+}
+
+/* line 66, /Users/nick/wdi/dialectical-therapy/app/assets/stylesheets/application.scss */
+.hidden {
+  display: none;
+}
