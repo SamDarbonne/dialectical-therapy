@@ -5,7 +5,6 @@ class EventsController < ApplicationController
   end
 
   def new
-<<<<<<< HEAD
   user_name = params[:user_name]
   @user = User.find_by(user_name: user_name)
     if !current_user
@@ -15,11 +14,6 @@ class EventsController < ApplicationController
     else
       @event = Event.new
     end
-=======
-    @event = Event.new
-    user_name = params[:user_name]
-    @user = User.find_by(user_name: user_name)
->>>>>>> bf0c710d651b6490c397daf3195034ba1e98ea0e
   end
 
   def create
@@ -60,6 +54,5 @@ class EventsController < ApplicationController
     event_info = params.require(:event).permit(:behavior, :trigger, :before, :before_notes, :after, :after_notes, :distraction, :soothing, :improving, :helpful, :hurtful, :reflection, :victory)
     event_params = event_info.merge({user_id: current_user.id})
   end
-
 
 end
