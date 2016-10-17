@@ -4,16 +4,35 @@
 $primary-color: rgba(136,118,168, 0.95);
 $secondary-color: rgba(196,178,228, 0.95);
 $blue-color: rgba(132,154,187, 0.95);
+$brown-gray-color: rgba(108,108,105, 0.95);
 
 body {
 	background-color: #8876a8;
 	height: 100%;
 	width: 100%;
 }
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+		 
 ul {
  list-style-type: none;
  }
- 
+
+a:link, a:visited {
+  color: $brown-gray-color;
+}
+
+p {
+	color: $brown-gray-color;
+ }
+
 .form-box {
 	margin: 100px auto;
 	padding: 50px;
