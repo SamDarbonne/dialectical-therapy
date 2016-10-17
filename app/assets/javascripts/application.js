@@ -18,9 +18,53 @@
 //= require_tree .
 console.log('application.js loaded')
 
+
+
 jQuery(document).ready(function() {
 	jQuery('#welcome-sign-in-button').on('click', function() {
 		jQuery('#welcome-home-box').toggleClass('hidden');
 		jQuery('#welcom-sign-in-box').toggleClass('hidden')
+	})
+
+	jQuery('#form-one-next').on('click', function(event) {
+		event.preventDefault();
+		console.log('clicked');
+		jQuery('#form-one').toggleClass('hidden');
+		jQuery('#form-two').toggleClass('hidden')
+	})
+
+	jQuery('#form-two-next').on('click', function(event) {
+		event.preventDefault();
+		console.log('clicked');
+		jQuery('#form-two').toggleClass('hidden');
+		jQuery('#form-three').toggleClass('hidden')
+	})
+
+	jQuery('#form-three-next').on('click', function(event) {
+		event.preventDefault();
+		console.log('clicked');
+		jQuery('#form-three').toggleClass('hidden');
+		jQuery('#form-four').toggleClass('hidden')
+	})
+
+	jQuery('#form-two-back').on('click', function(event) {
+		event.preventDefault();
+		console.log('clicked');
+		jQuery('#form-two').toggleClass('hidden');
+		jQuery('#form-one').toggleClass('hidden')
+	})
+
+	jQuery('#form-three-back').on('click', function(event) {
+		event.preventDefault();
+		console.log('clicked');
+		jQuery('#form-three').toggleClass('hidden');
+		jQuery('#form-two').toggleClass('hidden')
+	})
+
+	jQuery('#form-four-back').on('click', function(event) {
+		event.preventDefault();
+		console.log('clicked');
+		jQuery('#form-four').toggleClass('hidden');
+		jQuery('#form-three').toggleClass('hidden')
 	})
 })

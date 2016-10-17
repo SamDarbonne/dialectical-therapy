@@ -50,6 +50,8 @@ GEM
       safely_block (>= 0.1.1)
       user_agent_parser
       uuidtools
+    animate-rails (1.0.10)
+      rails
     arel (7.1.4)
     bcrypt (3.1.11)
     browser (2.2.0)
@@ -187,6 +189,7 @@ PLATFORMS
 
 DEPENDENCIES
   ahoy_matey
+  animate-rails
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.2)

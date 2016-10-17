@@ -1,20 +1,20 @@
 <%= simple_form_for @event, url: create_event_path, as: 'user_event' do |f| %>
-
+<section>
 <form class='entire_form'>
   <div class='new_event_form container'>
     <div class='wrapper row'>
       <div class='col-m8 offset-m2'>
-        <div class='form_one row'>
+        <div class='form_one row form-box' id="form-one">
           <div class='col-m4 offset-m2'>
             <%= f.input :trigger, label: 'What was the prompting event?', placeholder: 'What happened right before? What may have been the trigger?' %>
             <%= f.input :behavior, label: 'Describe what happened.', placeholder: 'What was your reaction? What did you do? What was the behavior?' %>
           </div>
           <div class='back_next_buttons'>
-            <%= f.button :button, 'Back' %>
-            <%= f.button :button, 'Next' %>
+            <button id="form-one-next" class="btn">Next</button>
+            <button id="form-one-1" class="btn number-selection">1</button>
           </div>
         </div>
-      <div class='form_two row'>
+      <div class='form_two row form-box hidden' id="form-two">
         <div class='col-m4 offset-m2'>
           <%= f.input :before, as: :radio_buttons, label: 'How did you feel right before?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
           <%= f.input :before_notes, label: 'Describe the intensity of your feelings.', placeholder: '(optional)' %><br>
@@ -22,11 +22,11 @@
           <%= f.input :after_notes, label: 'Describe how your feelings changed.', placeholder: '(optional)' %>
         </div>
         <div class='back_next_buttons'>
-          <%= f.button :button, 'Back' %>
-          <%= f.button :button, 'Next' %>
+            <button id="form-two-back" class="btn">Back</button>
+            <button id="form-two-next" class="btn">Next</button>
         </div>
       </div>
-      <div class='form_three row'>
+      <div class='form_three row form-box hidden' id="form-three">
         <div class='col-m4 offset-m2'>
           <%= f.input :distraction, as: :check_boxes, label: 'Needed a Distraction', collection: ['']%>
           <%= f.input :soothing, as: :check_boxes, label: 'Self-Soothing', collection: ['']%>
@@ -35,17 +35,17 @@
           <%= f.input :hurtful, label: 'How did the behavior hurt you?' %>
         </div>
         <div class='back_next_buttons'>
-          <%= f.button :button, 'Back' %>
-          <%= f.button :button, 'Next' %>
+            <button id="form-three-back" class="btn">Back</button>
+            <button id="form-three-next" class="btn">Next</button>
         </div>
       </div>
-      <div class='page_four row'>
+      <div class='page_four row form-box hidden' id="form-four">
         <div class='form_four col-m4 offset-m2'>
           <%= f.input :reflection, label: 'What could you have done differently?', placeholder: 'Reflect on what you would want to do next time.' %>
           <%= f.input :victory, label: 'What are you proud of?', placeholder: 'Claim your victories!' %>
         </div>
         <div class='back_next_buttons'>
-          <%= f.button :button, 'Back' %>
+            <button id="form-four-back" class="btn">Back</button>
         </div>
         <div class='save_button'>
           <%= f.submit 'Save' %>
@@ -54,4 +54,7 @@
     </div>
   </div>
 </div>
+</form>
+</section>
+
 <% end %>
