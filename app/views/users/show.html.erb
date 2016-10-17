@@ -1,8 +1,9 @@
 
 <aside>
-<%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
+	<%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "mountains") %>
 </aside>
 <section>
+<<<<<<< HEAD
 <div class="container clearfix">
 	<div class="row clearfix">
 		<div class="form-box clearfix">
@@ -19,7 +20,31 @@
           <button class="btn deep-purple lighten-2"><%= link_to 'New Event', '/users/' + current_user.user_name + '/events/new'%></button>
         </ul>
       </div>
+=======
+	<div>
+		<h4><%= @user.first_name %> <%= @user.last_name %></h4>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="form-box clearfix">
+				<div id="events-container" class="col s6">
+					<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
+					<h3>Your Entries</h3>
+	        <ul>
+	          <% for event in @events %>
+	            <li id="event-lists">
+	              <p>
+	                <%= link_to event.created_at.strftime("%b. %d, %Y"), '/users/' + @user.user_name + '/events/' + event.id.to_s %><br>
+									Triggering Event: <%= truncate(event.trigger) %><br>
+									Behavior: <%= truncate(event.behavior) %>
+								</p>
+	            </li>
+	            <hr>
+	          <% end %>
+	        </ul>
+	      </div>
+			</div>
+>>>>>>> bf0c710d651b6490c397daf3195034ba1e98ea0e
 		</div>
 	</div>
-</div>
 </section>
