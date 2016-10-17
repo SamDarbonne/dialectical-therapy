@@ -6,12 +6,6 @@ $secondary-color: rgba(196,178,228, 0.95);
 $blue-color: rgba(132,154,187, 0.95);
 $brown-gray-color: rgba(108,108,105, 0.95);
 
-body {
-	background-color: #8876a8;
-	height: 100%;
-	width: 100%;
-}
-
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -20,28 +14,37 @@ body {
      clear: both;
      height: 0;
      }
-		 
-ul {
- list-style-type: none;
- }
+
+h4 {
+	color: white;
+	text-align: center;
+}
+
+.container {
+	.form-box {
+		margin: 5% auto;
+		padding: 5%;
+		background-color: white;
+	}
+	.new-event-button {
+		color: white;
+	}
+	h3 {
+		font-size: 2em;
+	}
+}
 
 a:link, a:visited {
-  color: $brown-gray-color;
+	color: $brown-gray-color;
 }
 
-p {
+ul {
+	list-style-type: none;
+}
+
+h3, p {
 	color: $brown-gray-color;
  }
-
-.form-box {
-	margin: 100px auto;
-	padding: 50px;
-	background-color: white;
-}
-
-.white-tainer {
-	background-color: white;
-}
 
 #new-event-button {
 	background-color: $blue-color;

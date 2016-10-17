@@ -3,10 +3,15 @@
 	<%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "mountains") %>
 </aside>
 <section>
+	<div>
+		<h4><%= @user.first_name %> <%= @user.last_name %></h4>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="form-box clearfix">
 				<div id="events-container" class="col s6">
+					<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
+					<h3>Your Entries</h3>
 	        <ul>
 	          <% for event in @events %>
 	            <li>
@@ -16,7 +21,6 @@
 	            </li>
 	            <hr>
 	          <% end %>
-	          <button class="btn" id="new-event-button"><%= link_to 'New Event', '/users/' + current_user.user_name + '/events/new'%></button>
 	        </ul>
 	      </div>
 			</div>
