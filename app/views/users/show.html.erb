@@ -11,7 +11,7 @@
 	          <% for event in @events %>
 	            <li>
 	              <p>
-	                <%= link_to event.created_at.strftime("%d %b. %Y"), '/users/' + @user.id.to_s + '/events/' + event.id.to_s %>
+	                <%= link_to event.created_at.strftime("%d %b. %Y"), '/users/' + @user.user_name + '/events/' + event.id.to_s %>
 	              </p>
 	            </li>
 	            <hr>
