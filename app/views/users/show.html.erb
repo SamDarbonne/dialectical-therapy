@@ -2,8 +2,8 @@
 <aside>
 <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
 </aside>
-<section>
 
+<section>
 
 		<div class="row">
 			<div class="form-box clearfix">
@@ -33,7 +33,7 @@
 								<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, {  :prompt => "Choose a proffessional"}) %>
 							</div>
 						<% end %>
-
+						<%= render partial: "admin_show" if @user.is_prof? %>
 
 			</div>
 		</div>
