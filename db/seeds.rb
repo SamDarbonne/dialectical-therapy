@@ -38,7 +38,7 @@ users = User.create([
     last_name: "Budig",
     user_name: "NBudig",
     email: "nickbudig@example.com",
-    password: "password"
+    password: "password",
     professional_id: 5
   },
   {

@@ -5,6 +5,7 @@
 
 <section>
 
+		<h4><%= @user.first_name %> <%= @user.last_name %></h4>
 		<div class="row">
 			<div class="form-box clearfix">
 				<div id="events-container" class="col s6">
@@ -27,14 +28,16 @@
 	          <% end %>
 	        </ul>
 	      </div>
-
-						<% if !@user.professional %>
-						<div class="col s6" id="#prof-container">
-								<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, {  :prompt => "Choose a proffessional"}) %>
-							</div>
-						<% end %>
-						<%= render partial: "admin_show" if @user.is_prof? %>
-
+				<div class="col s6" id="#prof-container">
+					<% if !@user.professional && !@user.is_prof %>
+					<p>You aren't assigned to a professional yet. You may choose one from the list below</p>
+						<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, {  :prompt => "Choose a professional"}) %>
+						<button type="button" class="btn", method="PATCH">Choose</button>
+					<% elsif !@user.is_prof %>
+						<h5> Your professional is <%= User.find_by_id(@user.professional_id).first_name + " " + User.find_by_id(@user.professional_id).last_name %> </h5>
+					<% end %>
+				</div>
+				<%= render partial: "admin_show" if @user.is_prof? %>
 			</div>
 		</div>
 </section>
