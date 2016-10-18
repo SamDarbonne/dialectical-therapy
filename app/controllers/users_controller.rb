@@ -25,19 +25,14 @@ class UsersController < ApplicationController
   def show
     @profs = User.where(is_prof: true)
     @user = User.find_by(user_name: params[:user_name])
-<<<<<<< HEAD
     if !current_user
       redirect_to root_path
     elsif current_user.id != @user.id
       redirect_to user_path(current_user.user_name)
     else
-      @events = @user.events
+      user_events = @user.events
+      @events = user_events.page(params[:page]).per(5)
     end
-=======
-    user_events = @user.events
-    @events = user_events.page(params[:page]).per(5)
->>>>>>> 272bb37a3e340c3f5ce8bca2e17d85a813964cb1
-
   end
 
   def edit
