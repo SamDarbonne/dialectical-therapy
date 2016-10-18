@@ -44,6 +44,7 @@ function reasonToggles(reasonClicked, reason1ToHide, reason2ToHide) {
 function setHiddenToggles(clickedButton, firstBox, secondBox, tabToBe){
 	$('#' + clickedButton).on('click', function(event) {
 		event.preventDefault();
+		console.log($(this).text());
 		$('#' + firstBox).addClass('animated flash');
 		$('#' + secondBox).removeClass('hidden');
 		$('#' + secondBox).addClass('animated fadeIn');
@@ -75,6 +76,8 @@ function radioButtons(feeling, input, start, end) {
 		console.log($($('.' + input)[0]).attr('value'))
 	})
 }
+
+
 
 // document ready
 //   show form one
