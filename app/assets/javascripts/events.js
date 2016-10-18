@@ -10,25 +10,56 @@ $(document).on('turbolinks:load', function(){
 	radioButtons('after-feeling', 'after-input', 17, 26);
 	
 	//list all of our toggle buttons
-	setHiddenToggles('welcome-sign-in-button', 'welcome-home-box', "welcome-sign-in-box");
-	setHiddenToggles('form-one-next', 'form-one', 'form-two');
-	setHiddenToggles('form-two-next', 'form-two', 'form-three');
-	setHiddenToggles('form-three-next', 'form-three', 'form-four');
-	setHiddenToggles('form-two-back', 'form-two', 'form-one');
-	setHiddenToggles('form-three-back', 'form-three', 'form-two');
-	setHiddenToggles('form-four-back', 'form-four', 'form-three');
+	setHiddenToggles('form-one-next', 'form-one', 'form-two', 'tab-activate-two');
+	setHiddenToggles('form-two-next', 'form-two', 'form-three', 'tab-activate-three');
+	setHiddenToggles('form-three-next', 'form-three', 'form-four', 'tab-activate-four');
+	setHiddenToggles('form-two-back', 'form-two', 'form-one', 'tab-activate-one');
+	setHiddenToggles('form-three-back', 'form-three', 'form-two', 'tab-activate-two');
+	setHiddenToggles('form-four-back', 'form-four', 'form-three', 'tab-activate-three');
+
+	//set tab click listeners so that forms change on tab click
+	tabClick('tab-one', 'form-one', 'form-two', 'form-three', 'form-four');
+	tabClick('tab-two', 'form-two', 'form-one', 'form-three', 'form-four');
+	tabClick('tab-three', 'form-three', 'form-one', 'form-two', 'form-four');
+	tabClick('tab-four', 'form-four', 'form-one', 'form-two', 'form-three');
+
+	//make the reasons for action clickable
+	reasonToggles('checkbox-1', 'checkbox-2', 'checkbox-3');
+	reasonToggles('checkbox-2', 'checkbox-1', 'checkbox-3');
+	reasonToggles('checkbox-3', 'checkbox-1', 'checkbox-2');
 })
 
-// set the click listener for hiding current form-box and showing the next or previous, for user with
-// next and back buttons
-function setHiddenToggles(clickedButton, firstBox, secondBox){
-	$('#' + clickedButton).on('click', function(event) {
-		event.preventDefault();
-		$('#' + firstBox).toggleClass('hidden');
-		$('#' + secondBox).toggleClass('hidden');
+function reasonToggles(reasonClicked, reason1ToHide, reason2ToHide) {
+	$('#' + reasonClicked).on('click', function() {
+		$($(this).children()[0]).removeClass('checkbox');
+		$($(this).children()[0]).addClass('checkbox-active');
+		$($('#' + reason1ToHide).children()[0]).removeClass('checkbox-active');
+		$($('#' + reason1ToHide).children()[0]).addClass('checkbox');
+		$($('#' + reason2ToHide).children()[0]).removeClass('checkbox-active');
+		$($('#' + reason2ToHide).children()[0]).addClass('checkbox');
 	})
 }
-
+// set the click listener for hiding current form-box and showing the next or previous, for user with
+// next and back buttons
+function setHiddenToggles(clickedButton, firstBox, secondBox, tabToBe){
+	$('#' + clickedButton).on('click', function(event) {
+		event.preventDefault();
+		console.log($(this).text());
+		$('#' + firstBox).addClass('hidden');
+		$('#' + secondBox).removeClass('hidden');
+		$('#' + secondBox).addClass('animated fadeIn');
+		$('ul.tabs').tabs('select_tab', tabToBe);
+	})
+}
+function tabClick(clickedTab, boxToShow, box1ToHide, box2ToHide, box3ToHide) {
+	$('#' + clickedTab).on('click', function() {
+		$('#' + box1ToHide).addClass('hidden');
+		$('#' + box2ToHide).addClass('hidden');
+		$('#' + box3ToHide).addClass('hidden');
+		$('#' + boxToShow).removeClass('hidden animated fadeIn');
+		$('#' + boxToShow).addClass('animated fadeIn');
+	})
+}
 // set CSS class of clicked button to highlighted, remove highlighted class from all other buttons,
 //   and sets hidden input field as value of button clicked
 function radioButtons(feeling, input, start, end) {
@@ -45,6 +76,8 @@ function radioButtons(feeling, input, start, end) {
 		console.log($($('.' + input)[0]).attr('value'))
 	})
 }
+
+
 
 // document ready
 //   show form one
