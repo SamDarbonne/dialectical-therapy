@@ -15,10 +15,11 @@
                   <%= link_to event.created_at, '/users/' + @user.id.to_s + '/events/' + event.id.to_s %> 
                 </p>
               </li>
-
+              <% end %>
               <hr>
-              <button class="btn deep-purple lighten-2"><%= link_to 'New Event', '/users/' + current_user.user_name + '/events/new'%></button>
-            <% end %>
+              <% if !@user.is_prof %>
+                <button class="btn deep-purple lighten-2"><%= link_to 'New Event', '/users/' + current_user.user_name + '/events/new'%></button>
+              <% end %>
             <%= render partial: "admin_show" if @user.is_prof? %>
         </ul>
       </div>
