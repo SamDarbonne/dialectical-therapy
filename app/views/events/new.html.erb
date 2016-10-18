@@ -24,6 +24,7 @@
             <%= f.input :behavior, label: "Describe what happened.", placeholder: "What was your reaction? What did you do? What was the behavior?" %>
           </div>
           <div class="back_next_buttons">
+            <button id="form-two-back" class="btn deep-purple lighten-2 deep-purple-text">Cancel</button>
             <button id="form-one-next" class="btn deep-purple lighten-2 deep-purple-text lighten-2">Next</button>
           </div>
         </div>
@@ -58,7 +59,7 @@
           <%= f.input :after, :as => :hidden, :input_html => { :value => 1, :class => "after-input" } %>
           <%= f.input :after_notes, label: "Describe how your feelings changed.", placeholder: "(optional)" %>
         </div>
-        <div class="back_next_buttons">
+        <div class="back-next-buttons">
             <button id="form-two-back" class="btn deep-purple lighten-2 deep-purple-text">Back</button>
             <button id="form-two-next" class="btn deep-purple lighten-2 deep-purple-text">Next</button>
         </div>
@@ -74,7 +75,7 @@
           <%= f.input :helpful, label: "How did the behavior help you?" %>
           <%= f.input :hurtful, label: "How did the behavior hurt you?" %>
         </div>
-        <div class="back_next_buttons">
+        <div class="back-next-buttons">
             <button id="form-three-back" class="btn deep-purple lighten-2 deep-purple-text">Back</button>
             <button id="form-three-next" class="btn deep-purple lighten-2 deep-purple-text">Next</button>
         </div>
@@ -84,7 +85,7 @@
           <%= f.input :reflection, label: "What could you have done differently?", placeholder: "Reflect on what you would want to do next time." %>
           <%= f.input :victory, label: "What are you proud of?", placeholder: "Claim your victories!" %>
         </div>
-        <div class="back_next_buttons">
+        <div class="back-next-buttons">
             <button id="form-four-back" class="btn deep-purple lighten-2 deep-purple-text">Back</button>
             <button id="form-save-button" class="btn deep-purple lighten-2 deep-purple-text">Save</button>
         </div>
