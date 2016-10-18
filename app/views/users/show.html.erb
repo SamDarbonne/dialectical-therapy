@@ -3,6 +3,14 @@
 <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
 </aside>
 <section>
+	<% if !@user.professional %>
+	<div class="container">
+		<div class="form-box">
+			<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, { :include_blank => true }) %>
+		</div>
+	</div>
+
+	<% end %>
 <div class="container">
 	<div class="row">
 		<div class="form-box clearfix">

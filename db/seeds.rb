@@ -36,6 +36,14 @@ users = User.create([
     user_name: "NBudig",
     email: "nickbudig@example.com",
     password: "password"
+  },
+  {
+    first_name: "Carl",
+    last_name: "Jung",
+    user_name: "CJ",
+    email: "Carl@example.com",
+    password: "password",
+    is_prof: true
   }
 ])
 

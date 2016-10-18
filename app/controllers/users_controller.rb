@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @profs = User.where(is_prof: true)
     @user = User.find_by(user_name: params[:user_name])
     if !current_user
       redirect_to root_path

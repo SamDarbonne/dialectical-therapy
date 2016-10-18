@@ -20,5 +20,5 @@
 
 $(document).on('turbolinks:load',function() {
 	console.log('application.js loaded! Huzzah!')
+  $('select').material_select();
 })
-
