@@ -14,4 +14,7 @@ class User < ApplicationRecord
   	@user = User.find_by({user_name: params[:user_name]})
   	@user ? @user.authenticate(params[:password]) : false
   end
+  def to_label
+    return self.first_name + " " + self.last_name
+  end
 end

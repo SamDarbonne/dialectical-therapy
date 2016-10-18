@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="form-box clearfix">
 				<div id="events-container" class="col s6">
-					<% if @user.id != current_user.id %>
+					<% if @user.id == current_user.id %>
 						<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
 					<% end %>
 
@@ -30,9 +30,11 @@
 	      </div>
 				<div class="col s6" id="#prof-container">
 					<% if !@user.professional && !@user.is_prof %>
-					<p>You aren't assigned to a professional yet. You may choose one from the list below</p>
-						<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, {  :prompt => "Choose a professional"}) %>
-						<button type="button" class="btn", method="PATCH">Choose</button>
+					<p>You aren't assigned to a professional yet. You may choose one from the list below to share your events with.</p>
+					<%= simple_form_for @user, url: '/users/' + @user.user_name, method: 'patch' do |f| %>
+						<%= f.input :professional_id, collection: @profs %>
+						<%= f.button :submit, 'Choose' %>
+					<% end %>
 					<% elsif !@user.is_prof %>
 						<h5> Your professional is <%= User.find_by_id(@user.professional_id).first_name + " " + User.find_by_id(@user.professional_id).last_name %> </h5>
 					<% end %>

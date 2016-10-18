@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   end
 
   def new
-  user_name = params[:user_id]
+  user_name = params[:user_name]
   @user = User.find_by(user_name: user_name)
     if !current_user
       redirect_to root_path

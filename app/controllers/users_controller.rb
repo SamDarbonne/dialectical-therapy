@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
     if !current_user
       redirect_to root_path
-    elsif current_user.id != @user.id
+    elsif current_user.id != @user.id && current_user.id != @user.professional_id
       redirect_to user_path(current_user.user_name)
     else
       user_events = @user.events
@@ -46,22 +46,22 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params [:user_name])
+    @user = User.find_by(user_name: params[:user_name])
     if @user.update(user_params)
       redirect_to user_path
     end
   end
 
   def destroy
-    user_id = params[:id]
-    @user = User.find_by_id(user_id)
+    user_name = params[:user_name]
+    @user = User.find_by(user_name: user_name)
     @user.destroy
     redirect_to root_path
   end
 
   private
   def user_params
-    params.require(:user).permit(:user_name, :first_name, :last_name, :email, :password)
+    params.require(:user).permit(:user_name, :first_name, :last_name, :email, :professional_id, :password)
   end
 
 end
