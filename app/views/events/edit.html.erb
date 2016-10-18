@@ -1,68 +1,97 @@
-<div class="container">
-  <%= simple_form_for @event, url: '/users/' + @user.user_name + '/events/' + @event.id.to_s, method: "patch" do |f|%>
 
-    <div class="row">
+<aside>
+  <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
+</aside>
+<section>
+<%= simple_form_for @event, url: '/users/' + @user.user_name + '/events/', method: "post" do |f| %>
     <!-- Tabs  -->
-      <div class="col s12">
-          <ul>
-              <li class="col m3 s12"><a id="tab-one">Part 1</a></li>
-              <li class="col m3 s12"><a>Part 2</a></li>
-              <li class="col m3 s12"><a>Part 3</a></li>
-              <li class="col m3 s12"><a>Part 4</a></li>
-              <div class="indicator blue" style="z-index:1"></div>
+      <div class="col s12 animated fadeIn">
+          <ul class="tabs">
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text active" id="tab-one" href="#tab-activate-one">Part 1</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-two" href="#tab-activate-two">Part 2</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-three" href="#tab-activate-three">Part 3</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-four" href="#tab-activate-four">Part 4</a></li>
           </ul>
       </div>
-    </div>
-    <!-- Part 1 of form -->
-    <div class='form form_one row active form-box' id="form_one">
-      <div class='col-m4 offset-m2'>
-        <%= f.input :trigger, label: 'What was the prompting event?', placeholder: 'What happened right before? What may have been the trigger?' %>
-        <%= f.input :behavior, label: 'Describe what happened.', placeholder: 'What was your reaction? What did you do? What was the behavior?' %>
-      </div>
-      <div class='back_next_buttons'>
-        <button id="one-btn">Next</button>
-      </div>
-    </div>
-    <!-- Part 2 of form -->
-    <div class='form form_two row form-box' id="form_two">
-      <div class='col-m4 offset-m2'>
-        <%= f.input :before, as: :radio_buttons, label: 'How did you feel right before?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
-        <%= f.input :before_notes, label: 'Describe the intensity of your feelings.', placeholder: '(optional)' %><br>
-        <%= f.input :after, as: :radio_buttons, label: 'How do you feel now?', collection: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
-        <%= f.input :after_notes, label: 'Describe how your feelings changed.', placeholder: '(optional)' %>
-      </div>
-      <div class='back_next_buttons'>
-        <a href="#form_one">Back</a>
-        <a href="#form_three">Next</a>
-      </div>
-    </div>
-    <!-- Part 3 of form -->
-    <div class='form form_three row form-box' id="form_three">
-      <div class='col-m4 offset-m2'>
-        <%= f.input :distraction, as: :check_boxes, label: 'Needed a Distraction', collection: ['']%>
-        <%= f.input :soothing, as: :check_boxes, label: 'Self-Soothing', collection: ['']%>
-        <%= f.input :improving, as: :check_boxes, label: 'Improving the Moment', collection: ['']%>
-        <%= f.input :helpful, label: 'How did the behavior help you?' %>
-        <%= f.input :hurtful, label: 'How did the behavior hurt you?' %>
-      </div>
-      <div class='back_next_buttons'>
-        <a href="#form_two">Back</a>
-        <a href="#form_four">Next</a>
-      </div>
-    </div>
-    <!-- Part 4 of form -->
-    <div class='form page_four row form-box' id="form_four">
-      <div class='form_four col-m4 offset-m2'>
-        <%= f.input :reflection, label: 'What could you have done differently?', placeholder: 'Reflect on what you would want to do next time.' %>
-        <%= f.input :victory, label: 'What are you proud of?', placeholder: 'Claim your victories!' %>
-      </div>
-      <div class='back_next_buttons'>
-        <a href="#form_three">Back</a>
-      </div>
-      <div class='save_button'>
-        <%= f.button :submit, 'Update' %>
-      </div>
-    </div>
 
+  <div class="new_event_form container">
+    <div class="wrapper row">
+      <div class="col-m8 offset-m2">
+        <div class="form_one row form-box animated fadeIn" id="form-one">
+          <div class="col-m4 offset-m2">
+            <%= f.input :trigger, label: "What was the prompting event?", placeholder: "What happened right before? What may have been the trigger?" %>
+            <%= f.input :behavior, label: "Describe what happened.", placeholder: "What was your reaction? What did you do? What was the behavior?" %>
+          </div>
+          <div class="back_next_buttons">
+            <button id="form-one-cancel" class="btn deep-purple lighten-2 deep-purple-text">Cancel</button>
+            <button id="form-one-next" class="btn deep-purple lighten-2 deep-purple-text lighten-2">Next</button>
+          </div>
+        </div>
+      <div class="form_two row form-box hidden" id="form-two">
+        <div class="col-m4 offset-m2">
+          <label>How did you feel before?</label>
+          <a href="" class="disabled before-feeling" id="before-0"><div class="number-box">0</div></a>
+          <a href="" class="disabled before-feeling" id="before-1"><div class="number-box">1</div></a>
+          <a href="" class="disabled before-feeling" id="before-2"><div class="number-box">2</div></a>
+          <a href="" class="disabled before-feeling" id="before-3"><div class="number-box">3</div></a>
+          <a href="" class="disabled before-feeling" id="before-4"><div class="number-box">4</div></a>
+          <a href="" class="disabled before-feeling" id="before-5"><div class="number-box">5</div></a>
+          <a href="" class="disabled before-feeling" id="before-6"><div class="number-box">6</div></a>
+          <a href="" class="disabled before-feeling" id="before-7"><div class="number-box">7</div></a>
+          <a href="" class="disabled before-feeling" id="before-8"><div class="number-box">8</div></a>
+          <a href="" class="disabled before-feeling" id="before-9"><div class="number-box">9</div></a>
+          <a href="" class="disabled before-feeling" id="before-10"><div class="number-box">10</div></a>
+          <br><br>
+          <%= f.input :before, :as => :hidden, :input_html => { :value => 1, :class => "before-input" } %>
+          <%= f.input :before_notes, label: "Describe the intensity of your feelings.", placeholder: "(optional)" %>
+          <label>How did you feel after?</label>
+          <a href="" class="disabled after-feeling" id="after-0"><div class="number-box">0</div></a>
+          <a href="" class="disabled after-feeling" id="after-1"><div class="number-box">1</div></a>
+          <a href="" class="disabled after-feeling" id="after-2"><div class="number-box">2</div></a>
+          <a href="" class="disabled after-feeling" id="after-3"><div class="number-box">3</div></a>
+          <a href="" class="disabled after-feeling" id="after-4"><div class="number-box">4</div></a>
+          <a href="" class="disabled after-feeling" id="after-5"><div class="number-box">5</div></a>
+          <a href="" class="disabled after-feeling" id="after-6"><div class="number-box">6</div></a>
+          <a href="" class="disabled after-feeling" id="after-7"><div class="number-box">7</div></a>
+          <a href="" class="disabled after-feeling" id="after-8"><div class="number-box">8</div></a>
+          <a href="" class="disabled after-feeling" id="after-9"><div class="number-box">9</div></a>
+          <a href="" class="disabled after-feeling" id="after-10"><div class="number-box">10</div></a>
+          <br><br>
+          <%= f.input :after, :as => :hidden, :input_html => { :value => 1, :class => "after-input" } %>
+          <%= f.input :after_notes, label: "Describe how your feelings changed.", placeholder: "(optional)" %>
+        </div>
+        <div class="back-next-buttons">
+            <button id="form-two-back" class="btn deep-purple lighten-2 deep-purple-text">Back</button>
+            <button id="form-two-next" class="btn deep-purple lighten-2 deep-purple-text">Next</button>
+        </div>
+      </div>
+      <div class="form_three row form-box hidden" id="form-three">
+        <div class="col-m4 offset-m2">
+          <label>Why did you do what you done did do?</label>
+          <a href="" class="disabled reason-box" id="checkbox-1"><div class="checkbox">Needed a Distraction</div></a>
+          <a href="" class="disabled reason-box" id="checkbox-2"><div class="checkbox">Self-Soothing</div></a>
+          <a href="" class="disabled reason-box" id="checkbox-3"><div class="checkbox">Improving the Moment</div></a>
+          <%= f.input :reason, :as => :hidden, :input_html => { :value => nil, :class => "reason-input" } %>
+          <br><br>
+          <%= f.input :helpful, label: "How did the behavior help you?" %>
+          <%= f.input :hurtful, label: "How did the behavior hurt you?" %>
+        </div>
+        <div class="back-next-buttons">
+            <button id="form-three-back" class="btn deep-purple lighten-2 deep-purple-text">Back</button>
+            <button id="form-three-next" class="btn deep-purple lighten-2 deep-purple-text">Next</button>
+        </div>
+      </div>
+      <div class="page_four row form-box hidden" id="form-four">
+        <div class="form_four col-m4 offset-m2">
+          <%= f.input :reflection, label: "What could you have done differently?", placeholder: "Reflect on what you would want to do next time." %>
+          <%= f.input :victory, label: "What are you proud of?", placeholder: "Claim your victories!" %>
+        </div>
+        <div class="back-next-buttons">
+            <button id="form-four-back" class="btn deep-purple lighten-2 deep-purple-text">Back</button>
+            <button id="form-save-button" class="btn deep-purple lighten-2 deep-purple-text">Save</button>
+        </div>
   <% end %>
 </div>
+
+
+</section>

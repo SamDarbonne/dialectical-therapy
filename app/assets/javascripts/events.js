@@ -6,9 +6,9 @@ $(document).on('turbolinks:load', function(){
 	})
 
 	// set radio buttons for how user was feeling before and after event
-	radioButtons('before-feeling', 'before-input', 1, 10);
-	radioButtons('after-feeling', 'after-input', 16, 25);
-	
+	radioButtons('before-feeling', 'before-input', 1, 11);
+	radioButtons('after-feeling', 'after-input', 17, 27);
+
 	//list all of our toggle buttons
 	setHiddenToggles('form-one-next', 'form-one', 'form-two', 'tab-activate-two');
 	setHiddenToggles('form-two-next', 'form-two', 'form-three', 'tab-activate-three');
