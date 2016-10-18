@@ -24,7 +24,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(user_name: params[:user_name])
-    @events = @user.events
+    user_events = @user.events
+    @events = user_events.page(params[:page]).per(5)
 
   end
 
