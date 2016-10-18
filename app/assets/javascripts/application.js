@@ -10,12 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require materialize-sprockets
 //= require jquery
 //= require ahoy
 //= require jquery_ujs
 //= require jquery.turbolinks
+//= require materialize
 //= require turbolinks
+//= require materialize-sprockets
 //= require_tree .
 
 
