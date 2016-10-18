@@ -8,6 +8,9 @@ $darker-primary: rgb(104, 58, 184);
 $blue-color: rgba(132,154,187, 0.95);
 $brown-gray-color: rgba(108,108,105, 0.95);
 
+#overflow-section {
+  overflow-y: 93vh;
+}
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -54,7 +57,6 @@ h4 {
 	}
   #events-container {
     width: auto;
-    overflow-y: scroll;
   }
   .bold {
     color: black;
