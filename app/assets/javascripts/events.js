@@ -61,6 +61,10 @@ function tabClick(clickedTab, boxToShow, box1ToHide, box2ToHide, box3ToHide) {
 		$('#' + box3ToHide).addClass('hidden');
 		$('#' + boxToShow).removeClass('hidden animated fadeIn');
 		$('#' + boxToShow).addClass('animated fadeIn');
+		$(this).addClass('active');
+		for(var i = 0; i < $(this).parent().siblings().length; i++){
+			$($($(this).parent().siblings()[i]).children()[0]).removeClass('active');
+		}
 	})
 }
 // set CSS class of clicked button to highlighted, remove highlighted class from all other buttons,

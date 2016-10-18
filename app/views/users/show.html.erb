@@ -14,7 +14,7 @@
 					<% end %>
 
 					<h3>Your Entries</h3>
-					<div id="nav"><%= paginate @events, id: "paginate-navbar" %></div>
+					<div id="nav"><%= paginate @events %></div>
 	        <ul>
 	          <% for event in @events %>
 	            <li id="event-lists">
