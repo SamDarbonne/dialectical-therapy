@@ -21,6 +21,7 @@ $secondary-color: rgba(220, 200, 250, 0.95);
 $blue-color: rgba(132, 154, 187, 0.95);
 $darker-primary: rgb(104, 58, 184);
 $brown-gray-color: rgba(108, 108, 105, 0.95);
+$transparent: rgba(0, 0, 0, 0);
 
 @media (min-width: 600px) {
 
@@ -98,7 +99,7 @@ $brown-gray-color: rgba(108, 108, 105, 0.95);
     }
 
     .tab {
-        background-color: rgba(0, 0, 0, 0);
+        background-color: $transparent;
     }
 
     .tab .active {
