@@ -12,7 +12,7 @@
 				<div id="events-container" class="col s6">
 					<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
 					<h3>Your Entries</h3>
-					<div id="nav"><%= paginate @events, id: "paginate-navbar" %></div>
+					<div id="nav"><%= paginate @events %></div>
 	        <ul>
 	          <% for event in @events %>
 	            <li id="event-lists">

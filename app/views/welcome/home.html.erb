@@ -8,12 +8,12 @@
 			<%= simple_form_for @user,  url: '/sessions' do |f| %>
 			  <%= f.input :user_name, :as => :string %>
 			  <%= f.input :password %>
-			  <%= f.button :submit, 'Sign In'%>
+			  <%= f.button :submit, 'Sign In' %>
 			<% end %>
 		</div>
-		<div class="welcome-box form-box" id="welcome-home-box">
-			<h1 class="centered">Welcome Home.</h1>
-			<button class="btn centered" id="welcome-sign-in-button"> Sign In </button>
+		<div class="welcome-box form-box animated fadeIn" id="welcome-home-box">
+			<h1 class="centered">We're here to help.</h1>
+			<button class="btn spaced-btn" id="welcome-get-info-button">Learn More</button><button class="btn spaced-btn" id="welcome-get-started-button">Get Started</button><button class="btn spaced-btn centered" id="welcome-sign-in-button"> Sign In </button>
 		</div>
 	</div>
 </div>

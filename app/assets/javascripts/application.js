@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require materialize-sprockets
 //= require jquery
 //= require ahoy
 //= require jquery_ujs
@@ -19,11 +20,5 @@
 
 
 $(document).on('turbolinks:load',function() {
-	$('#welcome-sign-in-button').on('click', function() {
-		$('#welcome-home-box').toggleClass('hidden');
-		$('#welcom-sign-in-box').toggleClass('hidden')
-	})
+	console.log('application.js loaded! Huzzah!')
 })
-
-console.log('application.js loaded! Huzzah!')
-

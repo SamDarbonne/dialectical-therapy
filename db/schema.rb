@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(version: 20161017201648) do
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
   end
 
+  create_table "johnnies", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "professionals", force: :cascade do |t|
     t.text     "user_name"
     t.text     "first_name"
