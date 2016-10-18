@@ -11,23 +11,27 @@
 	</div>
 
 	<% end %>
-<div class="container">
-	<div class="row">
-		<div class="form-box clearfix">
-			<div id="events-container" class="col s6">
-        <ul>
-          <% for event in @events %>
-            <li>
-              <p>
-                <%= link_to event.created_at, '/users/' + @user.id.to_s + '/events/' + event.id.to_s %>
-              </p>
-            </li>
-            <hr>
 
-          <% end %>
-          <button class="btn deep-purple lighten-2"><%= link_to 'New Event', '/users/' + current_user.user_name + '/events/new'%></button>
-        </ul>
-      </div>
+		<div class="row">
+			<div class="form-box clearfix">
+				<div id="events-container" class="col s6">
+					<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
+					<h3>Your Entries</h3>
+					<%= paginate @events, id: "paginate-navbar" %>
+	        <ul>
+	          <% for event in @events %>
+	            <li id="event-lists">
+	              <p>
+	                <%= link_to event.created_at.strftime("%b. %d, %Y"), '/users/' + @user.user_name + '/events/' + event.id.to_s %><br>
+									Triggering Event: <%= truncate(event.trigger) %><br>
+									Behavior: <%= truncate(event.behavior) %>
+								</p>
+	            </li>
+	            <hr>
+	          <% end %>
+	        </ul>
+	      </div>
+			</div>
 		</div>
 	</div>
 </div>
