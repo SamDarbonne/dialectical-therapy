@@ -29,8 +29,15 @@ nav a{
 $primary-color: rgba(136,118,168, 0.95);
 $secondary-color: rgba(220,200,250, 0.95);
 $blue-color: rgba(132,154,187, 0.95);
+$darker-primary: rgb(104, 58, 184);
 
+.tab {
+  background-color: rgba(0,0,0,0);
+}
 
+.tab .active {
+  background-color: $primary-color;
+}
 
 .number-selection {
 	padding: 0 -5px;
