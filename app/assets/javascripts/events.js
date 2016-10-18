@@ -6,8 +6,8 @@ $(document).on('turbolinks:load', function(){
 	})
 
 	// set radio buttons for how user was feeling before and after event
-	radioButtons('before-feeling', 'before-input', 2, 11);
-	radioButtons('after-feeling', 'after-input', 17, 26);
+	radioButtons('before-feeling', 'before-input', 1, 10);
+	radioButtons('after-feeling', 'after-input', 16, 25);
 	
 	//list all of our toggle buttons
 	setHiddenToggles('form-one-next', 'form-one', 'form-two', 'tab-activate-two');
@@ -31,12 +31,15 @@ $(document).on('turbolinks:load', function(){
 
 function reasonToggles(reasonClicked, reason1ToHide, reason2ToHide) {
 	$('#' + reasonClicked).on('click', function() {
+		text = $(this).text();
+		console.log(text);
 		$($(this).children()[0]).removeClass('checkbox');
 		$($(this).children()[0]).addClass('checkbox-active');
 		$($('#' + reason1ToHide).children()[0]).removeClass('checkbox-active');
 		$($('#' + reason1ToHide).children()[0]).addClass('checkbox');
 		$($('#' + reason2ToHide).children()[0]).removeClass('checkbox-active');
 		$($('#' + reason2ToHide).children()[0]).addClass('checkbox');
+		$('#event_reason').val(text)
 	})
 }
 // set the click listener for hiding current form-box and showing the next or previous, for user with
@@ -76,60 +79,3 @@ function radioButtons(feeling, input, start, end) {
 		console.log($($('.' + input)[0]).attr('value'))
 	})
 }
-
-
-
-// document ready
-//   show form one
-//   back button links to profile
-//   next button change class to hide form one and show form two
-
-//   on form two
-//   back button changes class to show form one and hide form three
-
-//   on form three
-//   back button changes class to show form two and hide form four
-
-//   on form four
-//   submit button that calls controller#create
-
-
-
-// // parsley example
-
-// $(function() {
-//   var $sections = $(".new_event_form");
-
-//   function navigateTo(index) {
-//     $sections
-//     .removeClass('current')
-//     .eq(index)
-//       .addClass('current');
-
-//   $('.back_next_buttons .previous').toggle(index > 0);
-
-//   var atTheEnd = index >= $sections.length - 0;
-
-//   $('.back_next_buttons .next').toggle(!atTheEnd);
-
-//   $('.back_next_buttons [type = submit]').toggle(atTheEnd);
-//   }
-
-//   function currentIndex() {
-//     return $sections.index($sections.filter('.current'));
-//   }
-
-//   $('.back_next_buttons .previous').click(function () {
-//     navigateTo(currentIndex() - 1);
-//   });
-
-//   $('.back_next_buttons .next').click(function() {
-//     if ($('.entire_form').parsley().validate({group: 'block-' + currentIndex()}))
-//     navigateTo(currentIndex() + 1);
-//   });
-
-//   $sections.each(function(index, section) {
-//     $(section).find(':input').attr('data-parsley-group', 'block-' + index);
-//   });
-//   navigateTo(0);
-// });

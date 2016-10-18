@@ -15,81 +15,97 @@
  *= require_self
  *= require animate
  */
-.btn a{
-  color: white;
-}
-#navbar {
-  background-color: #6c6c69;
-}
 
-nav a{
-  color: white;
-}
-
-$primary-color: rgba(136,118,168, 0.95);
-$secondary-color: rgba(220,200,250, 0.95);
-$blue-color: rgba(132,154,187, 0.95);
+$primary-color: rgba(136, 118, 168, 0.95);
+$secondary-color: rgba(220, 200, 250, 0.95);
+$blue-color: rgba(132, 154, 187, 0.95);
 $darker-primary: rgb(104, 58, 184);
-$brown-gray-color: rgba(108,108,105, 0.95);
-.tab {
-  background-color: rgba(0,0,0,0);
-}
+$brown-gray-color: rgba(108, 108, 105, 0.95);
 
-.tab .active {
-  background-color: $primary-color;
-}
-
-.number-selection {
-	padding: 0 -5px;
-	width: 1rem
+aside {
+    float: left;
+    width: 24%;
+    height: 93vh;
+    background-image: url("http://imgur.com/a/itE8G");
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-	background-image: url("http://imgur.com/a/itE8G");
-  max-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("http://imgur.com/a/itE8G");
+    max-height: 100%;
 }
 
-.aside-image {
-	height: 100%;
-	width: 100vw;
-}
-.form-box {
-	margin: 10vh auto;
-	padding: 50px;
-	background-color: white;
-  border-radius: 0.1rem;
-}
-
-.white-tainer {
-	background-color: white;
-}
-
-.centered {
-	text-align: center;
+nav a {
+    color: white;
 }
 
 section {
-  float: right;
-  width: 75%;
-  height: 93vh;
-  background-color: rgba(136,118,168, 0.95);
+    float: right;
+    width: 75%;
+    height: 93vh;
+    background-color: rgba(136, 118, 168, 0.95);
 }
-aside {
-  float: left;
-  width: 24%;
-  height: 93vh;;
-  background-image: url("http://imgur.com/a/itE8G");
+
+#navbar {
+    background-color: #6c6c69;
+}
+
+.aside-image {
+    height: 100%;
+    width: 100vw;
+}
+
+.btn a {
+    color: white;
+}
+
+.brand-logo {
+    margin-left: 15px;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+.form-box {
+    margin: 10vh auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 0.1rem;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
-.brand-logo{
-  margin-left: 15px;
+.last-nav {
+    margin-right: 15px;
 }
 
-.last-nav{
-  margin-right: 15px;
+.number-selection {
+    padding: 0 -5px;
+    width: 1rem
 }
+
+.spaced-btn {
+    margin: 0 0.5rem;
+}
+
+.tab {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.tab .active {
+    background-color: $primary-color;
+}
+
+.white-tainer {
+    background-color: white;
+}
+
+
+
+
+
+
