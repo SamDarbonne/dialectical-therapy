@@ -9,56 +9,47 @@
 		<div class="row">
 			<div class="form-box clearfix">
 				<div id="events-container" class="col s6">
-					<div>
-						<p><span class="bold">Entry created: </span><%= @event.created_at.strftime("%b. %d, %Y") %></p>
-						<p><span class="bold">Last updated: </span><%= @event.updated_at.strftime("%b. %d, %Y") %></p>
-<<<<<<< HEAD
-						<h3><span class="bold">Mindfulness</span></h3>
-						<p><span class="bold">Trigger: What was the prompting event? </span><br>
-=======
-						<h3><span class="bold">Mindfulness:</span></h3>
-						<p><span class="bold">The trigger that prompted my event was: </span><br>
->>>>>>> b18a00039fade9aba09bbfe40137dab6ba0d220c
-							<%= @event.trigger %></p>
-						<p><span class="bold">My behavior: </span><br>
-							<%= @event.behavior %></p>
-<<<<<<< HEAD
-						<h3><span class="bold">Emotional Regulation</span></h3>
-						<p><span class="bold">On a scale of 1 - 10, how did you feel before? </span><%= @event.before %></p>
-						<p><span class="bold">Describe the intensity of your feelings. </span><%= @event.before_notes %></p>
-						<p><span class="bold">On a scale of 1 - 10, how did you feel after? </span><%= @event.after %></p>
-=======
-						<h3><span class="bold">Emotional Regulation:</span></h3>
-						<p><span class="bold">Before the event, on a scale of 1 - 10, I felt like a </span><%= @event.before %></p>
-						<% if @event.before_notes %>
-							<p>
-								<span class="bold">Describe the intensity of your feelings. </span><%= @event.before_notes %>
-							</p>
-						<% end %>
-						<p><span class="bold">On a scale of 1 - 10, how did you feel after?: </span><%= @event.after %></p>
->>>>>>> b18a00039fade9aba09bbfe40137dab6ba0d220c
-						<p><span class="bold">Describe how your feelings changed. </span><%= @event.after_notes %></p>
-						<h3><span class="bold">Distress Tolerance:</span></h3>
-						<p><span class="bold">Needed a Distraction </span><%= @event.distraction %></p>
-						<p><span class="bold">To Self Soothe: </span><%= @event.soothing %></p>
-						<p><span class="bold">To Improve the Moment: </span><%= @event.improving %></p>
-<<<<<<< HEAD
-						<p><span class="bold">How did the behavior help you? </span><%= @event.helpful %></p>
-						<p><span class="bold">How did the behavior hurt you? </span><%= @event.hurtful %></p>
-						<h3><span class="bold">Increase Positivity</span></h3>
-						<p><span class="bold">Reflection: What could you have done differently? </span><%= @event.reflection %></p>
-						<p><span class="bold">Claim Your Victories: What are you proud of? </span><%= @event.victory %></p>
-=======
-						<p><span class="bold">The way this behavior helped me: </span><%= @event.helpful %></p>
-						<p><span class="bold">The way this behavior hurt me: </span><%= @event.hurtful %></p>
-						<h3><span class="bold">Increase Positivity:</span></h3>
-						<p><span class="bold">Things I could have done differently:</span><%= @event.reflection %></p>
-						<p><span class="bold">I am strong and I am proud because: </span><%= @event.victory %></p>
->>>>>>> b18a00039fade9aba09bbfe40137dab6ba0d220c
-					</div>
 					<div class="event-buttons">
 						<a class="waves-effect waves-light btn" id="edit-event-button"><%= button_to 'Edit Event', edit_event_path(@user.user_name, @event), {method: 'get'} %></a>
 						<a class="waves-effect waves-light btn" id="delete-event-button"><%= button_to 'Delete Event', event_path(@event), method: :delete, data: {confirm: 'Are you sure you want to delete this post?' }%></a>
+					</div>
+					<div>
+						<p><span class="bold">Entry created: </span><%= @event.created_at.strftime("%b. %d, %Y") %></p>
+						<p><span class="bold">Last updated: </span><%= @event.updated_at.strftime("%b. %d, %Y") %></p>
+						<h3><span class="bold">Mindfulness:</span></h3><hr>
+						<p><span class="bold">The trigger that prompted my behavior was: </span><br>
+							<%= @event.trigger %></p>
+						<p><span class="bold">My behavior: </span><br>
+							<%= @event.behavior %></p>
+						<h3><span class="bold">Emotional Regulation:</span></h3><hr>
+						<p><span class="bold">On a scale of 1 - 10, before I felt like: </span><%= @event.before %></p>
+						<% if @event.before_notes %>
+							<p>
+								<span class="bold">Describe the intensity of your feelings. </span><br>
+								<%= @event.before_notes %>
+							</p>
+						<% end %>
+						<p><span class="bold">On a scale of 1 - 10, after I felt like: </span><%= @event.after %></p>
+						<% if @event.after_notes %>
+							<p>
+								<span class="bold">Describe how your feelings changed. </span><br>
+								<%= @event.after_notes %>
+							</p>
+						<% end %>
+						<h3><span class="bold">Distress Tolerance:</span></h3><hr>
+						<p><span class="bold">My behavior was prompted by a need:</p></span>
+						<p><span class="bold">To Find a Distraction: </span><%= @event.distraction %></p>
+						<p><span class="bold">To Self Soothe: </span><%= @event.soothing %></p>
+						<p><span class="bold">To Improve the Moment: </span><%= @event.improving %></p>
+						<p><span class="bold">The way this behavior helped me: </span><br>
+							<%= @event.helpful %></p>
+						<p><span class="bold">The way this behavior hurt me: </span><br>
+							<%= @event.hurtful %></p>
+						<h3><span class="bold">Increase Positivity:</span></h3><hr>
+						<p><span class="bold">Things I could have done differently: </span><br>
+							<%= @event.reflection %></p>
+						<p><span class="bold">I am strong and I am proud because: </span><br>
+							<%= @event.victory %></p>
 					</div>
 				</div>
 			</div>
