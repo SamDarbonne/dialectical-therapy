@@ -4,13 +4,7 @@
 </aside>
 <section>
 
-	<div class="container">
-		<div class="form-box">
-			<% if !@user.professional %>
-					<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, {  :prompt => "Choose a proffessional"}) %>
-			<% end %>
-		</div>
-	</div>
+
 		<div class="row">
 			<div class="form-box clearfix">
 				<div id="events-container" class="col s6">
@@ -33,6 +27,14 @@
 	          <% end %>
 	        </ul>
 	      </div>
+
+						<% if !@user.professional %>
+						<div class="col s6" id="#prof-container">
+								<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, {  :prompt => "Choose a proffessional"}) %>
+							</div>
+						<% end %>
+
+
 			</div>
 		</div>
 </section>
