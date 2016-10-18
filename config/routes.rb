@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'welcome#home'
 
+  get '/about', to: 'welcome#about', as: "about_page"
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
