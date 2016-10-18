@@ -3,19 +3,21 @@
 <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
 </aside>
 <section>
-	<% if !@user.professional %>
+
 	<div class="container">
 		<div class="form-box">
-			<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, { :include_blank => true }) %>
+			<% if !@user.professional %>
+					<%= select("professional", "user_id", @profs.collect {|pro| [ pro.first_name + " " + pro.last_name, pro.id ] }, {  :prompt => "Choose a proffessional"}) %>
+			<% end %>
 		</div>
 	</div>
-
-	<% end %>
-
 		<div class="row">
 			<div class="form-box clearfix">
 				<div id="events-container" class="col s6">
+
 					<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
+
+
 					<h3>Your Entries</h3>
 					<%= paginate @events, id: "paginate-navbar" %>
 	        <ul>
@@ -33,6 +35,4 @@
 	      </div>
 			</div>
 		</div>
-	</div>
-</div>
 </section>

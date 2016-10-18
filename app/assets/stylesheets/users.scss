@@ -51,6 +51,7 @@ h4 {
 	}
   #events-container {
     width: auto;
+		display: inline-block;
   }
 }
 
@@ -70,8 +71,12 @@ h3, p {
 #new-event-button {
 	background-color: $blue-color;
   color: white;
-  display: inline-block;
+  display: inline;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+#prof-container{
+	display: inline;
 }
