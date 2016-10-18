@@ -14,10 +14,6 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy'
 
-  get '/prof/:id', to: 'professionals#show', as: 'prof'
-  post '/prof/new', to: 'professionals#new', as: 'new_prof'
-
-
   get '/users/:user_id/events/new', to: 'events#new', as: 'new_event'
   get '/users/:user_id/events/:id', to: 'events#show', as: 'event'
   post '/users/:user_id/events', to: 'events#create'

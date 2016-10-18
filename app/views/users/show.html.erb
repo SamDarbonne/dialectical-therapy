@@ -2,21 +2,24 @@
 <aside>
 <%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
 </aside>
+
 <section>
 <div class="container">
 	<div class="row">
 		<div class="form-box">
 			<div id="events-container" class="col s6">
         <ul>
-          <% for event in @events %>
-            <li>
-              <p>
-                <%= link_to event.created_at, '/users/' + @user.id.to_s + '/events/' + event.id.to_s %> 
-              </p>
-            </li>
-            <hr>
-          <% end %>
-          <button class="btn deep-purple lighten-2"><%= link_to 'New Event', '/users/' + current_user.user_name + '/events/new'%></button>
+            <% for event in @events %>
+              <li>
+                <p>
+                  <%= link_to event.created_at, '/users/' + @user.id.to_s + '/events/' + event.id.to_s %> 
+                </p>
+              </li>
+
+              <hr>
+              <button class="btn deep-purple lighten-2"><%= link_to 'New Event', '/users/' + current_user.user_name + '/events/new'%></button>
+            <% end %>
+            <%= render partial: "admin_show" if @user.is_prof? %>
         </ul>
       </div>
 		</div>
