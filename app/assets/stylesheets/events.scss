@@ -92,7 +92,7 @@ h3, p {
   width: 1.5rem;
   height: 1.5rem;
   background-color: $secondary-color;
-  color: $primary-color;
+  color: $darker-primary;
   padding: 0.2rem;
   display: inline-block;
   -webkit-user-select: none;       
@@ -122,5 +122,11 @@ h3, p {
   -webkit-user-select: none;       
   -moz-user-select: none; 
   -ms-user-select: none; 
+}
+
+@media (max-width: 600px) {
+  .section {
+    
+  }
 }
 
