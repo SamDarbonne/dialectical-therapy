@@ -2,11 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-$primary-color: rgba(136, 118, 168, 0.95);
+$primary-color: rgba(136,118,168, 0.95);
 $secondary-color: rgba(220, 200, 250, 0.95);
 $darker-primary: rgb(104, 58, 184);
+$blue-color: rgba(132,154,187, 0.95);
+$brown-gray-color: rgba(108,108,105, 0.95);
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+
 
 textarea:focus {
 	background-color: $secondary-color;
@@ -19,13 +30,63 @@ textarea:focus {
   width: 1.5rem;
   height: 1.5rem;
   background-color: $primary-color;
-  color: $darker-primary;
+  color: $secondary-color;
   padding: 0.2rem;
   display: inline-block;
   -webkit-user-select: none;       
   -moz-user-select: none; 
-  -ms-user-select: none; 
+  -ms-user-select: none;   
 }
+h4 {
+	color: white;
+	text-align: center;
+}
+
+.container {
+	.form-box {
+		margin: 5% auto;
+		padding: 5%;
+		background-color: white;
+	}
+	.new-event-button {
+		color: white;
+	}
+	h3 {
+		font-size: 2em;
+	}
+  #events-container {
+    width: auto;
+  }
+  .bold {
+    color: black;
+    font-weight: bolder;
+  }
+  p {
+    font-size: 1.25em;
+  }
+}
+.event-lists {
+	a:link, a:visited {
+		color: $brown-gray-color;
+	}
+}
+ul {
+	list-style-type: none;
+}
+
+h3, p {
+	color: $brown-gray-color;
+ }
+
+#edit-event-button, #delete-event-button {
+	background-color: $blue-color;
+  color: white;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .number-box-reversed {
   text-align: center;
   width: 1.5rem;
@@ -62,3 +123,4 @@ textarea:focus {
   -moz-user-select: none; 
   -ms-user-select: none; 
 }
+

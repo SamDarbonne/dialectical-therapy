@@ -1,4 +1,4 @@
-$(document).on('page:change', function(){
+$(document).on('turbolinks:load', function(){
   console.log("Ready!");
 	//prevent default behavior for all disabled anchor tags
 	jQuery('.disabled').on('click', function(event) {
