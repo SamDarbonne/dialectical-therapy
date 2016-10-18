@@ -14,28 +14,40 @@ users = User.create([
     last_name: "LeClair",
     user_name: "MLeClair",
     email: "mishaleclair@example.com",
-    password: "password"
+    password: "password",
+    professional_id: 5
   },
   {
     first_name: "Laura",
     last_name: "Russell",
     user_name: "LRussell",
     email: "laurarussell@example.com",
-    password: "password"
+    password: "password",
+    professional_id: 5
   },
   {
     first_name: "Sam",
     last_name: "Darbonne",
     user_name: "SmamHamwich",
     email: "samdarbonne@example.com",
-    password: "password"
+    password: "password",
+    professional_id: 5
   },
   {
     first_name: "Nick",
     last_name: "Budig",
     user_name: "NBudig",
     email: "nickbudig@example.com",
-    password: "password"
+    password: "password",
+    professional_id: 5
+  },
+  {
+    first_name: "Doc",
+    last_name: "Doctor",
+    user_name: "Doc",
+    email: "docdoctor@example.com",
+    password: "password",
+    is_prof: true
   }
 ])
 
