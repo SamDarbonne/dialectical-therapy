@@ -19,10 +19,6 @@
 
 
 $(document).on('turbolinks:load',function() {
-	$('#welcome-sign-in-button').on('click', function() {
-		$('#welcome-home-box').toggleClass('hidden');
-		$('#welcom-sign-in-box').toggleClass('hidden')
-	})
+	console.log('application.js loaded! Huzzah!')
 })
-console.log('application.js loaded! Huzzah!')
 

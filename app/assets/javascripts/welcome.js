@@ -5,8 +5,9 @@
 $(document).on('turbolinks:load', function() {
 	console.log('loaded welcome.js')
 	$('#welcome-sign-in-button').on('click', function() {
-		$('#welcome-sign-in-box').toggleClass('hidden');
-		$('#welcome-home-box').toggleClass('hidden');
+		$('#welcome-home-box').addClass('hidden');
+		$('#welcome-sign-in-box').toggleClass('hidden')
+		$('#welcome-sign-in-box').addClass('animated fadeIn');
 	})
 })
 

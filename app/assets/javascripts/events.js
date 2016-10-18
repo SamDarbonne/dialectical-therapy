@@ -45,7 +45,7 @@ function setHiddenToggles(clickedButton, firstBox, secondBox, tabToBe){
 	$('#' + clickedButton).on('click', function(event) {
 		event.preventDefault();
 		console.log($(this).text());
-		$('#' + firstBox).addClass('animated flash');
+		$('#' + firstBox).addClass('hidden');
 		$('#' + secondBox).removeClass('hidden');
 		$('#' + secondBox).addClass('animated fadeIn');
 		$('ul.tabs').tabs('select_tab', tabToBe);
