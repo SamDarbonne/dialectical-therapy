@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $primary-color: rgba(136,118,168, 0.95);
-$secondary-color: rgba(196,178,228, 0.95);
+$secondary-color: rgba(220, 200, 250, 0.95);
+$darker-primary: rgb(104, 58, 184);
 $blue-color: rgba(132,154,187, 0.95);
 $brown-gray-color: rgba(108,108,105, 0.95);
 
@@ -16,6 +17,26 @@ $brown-gray-color: rgba(108,108,105, 0.95);
      height: 0;
      }
 
+
+
+textarea:focus {
+	background-color: $secondary-color;
+	color: $darker-primary;
+	border: none
+}
+
+.number-box {
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 0.2rem;
+  display: inline-block;
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none;   
+}
 h4 {
 	color: white;
 	text-align: center;
@@ -65,3 +86,41 @@ h3, p {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+.number-box-reversed {
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 0.2rem;
+  display: inline-block;
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none;   
+}
+.checkbox {
+
+  text-align: center;
+  height: 1.5rem;
+  background-color: $primary-color;
+  color: $darker-primary;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+}
+.checkbox-active {
+
+  text-align: center;
+  height: 1.5rem;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+}
+

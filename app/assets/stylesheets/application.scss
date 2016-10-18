@@ -25,32 +25,18 @@
 nav a{
   color: white;
 }
-$primary-color: rgba(136,118,168, 0.95);
-$secondary-color: rgba(196,178,228, 0.95);
-$blue-color: rgba(132,154,187, 0.95);
-$brown-gray-color: rgba(108,108,105, 0.95);
 
-.number-box {
-  text-align: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: $primary-color;
-  color: $secondary-color;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+$primary-color: rgba(136,118,168, 0.95);
+$secondary-color: rgba(220,200,250, 0.95);
+$blue-color: rgba(132,154,187, 0.95);
+$darker-primary: rgb(104, 58, 184);
+$brown-gray-color: rgba(108,108,105, 0.95);
+.tab {
+  background-color: rgba(0,0,0,0);
 }
-.number-box-reversed {
-  text-align: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: $secondary-color;
-  color: $primary-color;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+
+.tab .active {
+  background-color: $primary-color;
 }
 
 .number-selection {
@@ -72,6 +58,7 @@ body {
 	margin: 10vh auto;
 	padding: 50px;
 	background-color: white;
+  border-radius: 0.1rem;
 }
 
 .white-tainer {
