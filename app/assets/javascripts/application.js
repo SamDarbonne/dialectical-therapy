@@ -14,7 +14,9 @@
 //= require ahoy
 //= require jquery_ujs
 //= require jquery.turbolinks
+//= require materialize
 //= require turbolinks
+//= require materialize-sprockets
 //= require_tree .
 
 
