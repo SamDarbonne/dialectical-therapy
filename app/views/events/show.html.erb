@@ -12,23 +12,23 @@
 					<div>
 						<p><span class="bold">Entry created: </span><%= @event.created_at.strftime("%b. %d, %Y") %></p>
 						<p><span class="bold">Last updated: </span><%= @event.updated_at.strftime("%b. %d, %Y") %></p>
-						<h3><span class="bold">Mindfulness:</span></h3>
+						<h3><span class="bold">Mindfulness</span></h3>
 						<p><span class="bold">Trigger: What was the prompting event? </span><br>
 							<%= @event.trigger %></p>
 						<p><span class="bold">Behavior: Decribe what happened. </span><br>
 							<%= @event.behavior %></p>
-						<h3><span class="bold">Emotional Regulation:</span></h3>
-						<p><span class="bold">On a scale of 1 - 10, how did you feel before?: </span><%= @event.before %></p>
+						<h3><span class="bold">Emotional Regulation</span></h3>
+						<p><span class="bold">On a scale of 1 - 10, how did you feel before? </span><%= @event.before %></p>
 						<p><span class="bold">Describe the intensity of your feelings. </span><%= @event.before_notes %></p>
-						<p><span class="bold">On a scale of 1 - 10, how did you feel after?: </span><%= @event.after %></p>
+						<p><span class="bold">On a scale of 1 - 10, how did you feel after? </span><%= @event.after %></p>
 						<p><span class="bold">Describe how your feelings changed. </span><%= @event.after_notes %></p>
 						<h3><span class="bold">Distress Tolerance:</span></h3>
-						<p><span class="bold">Needed a Distrction: </span><%= @event.distraction %></p>
+						<p><span class="bold">Needed a Distraction </span><%= @event.distraction %></p>
 						<p><span class="bold">To Self Soothe: </span><%= @event.soothing %></p>
 						<p><span class="bold">To Improve the Moment: </span><%= @event.improving %></p>
 						<p><span class="bold">How did the behavior help you? </span><%= @event.helpful %></p>
 						<p><span class="bold">How did the behavior hurt you? </span><%= @event.hurtful %></p>
-						<h3><span class="bold">Increase Positivity:</span></h3>
+						<h3><span class="bold">Increase Positivity</span></h3>
 						<p><span class="bold">Reflection: What could you have done differently? </span><%= @event.reflection %></p>
 						<p><span class="bold">Claim Your Victories: What are you proud of? </span><%= @event.victory %></p>
 					</div>
