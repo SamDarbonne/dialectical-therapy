@@ -63,18 +63,32 @@ $brown-gray-color: rgba(108,108,105, 0.95);
   h2 {
     font-size: 2em;
   }
+  h4 {
+    color: $brown-gray-color;
+  }
   img {
-    background-color: black;
-    border-radius: 50%;
+    // background-color: black;
+    // border-radius: 50%;
     width: 150px;
     height: 150px;
   }
 }
 
-.left {
-  float: left;
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
 }
 
-.right {
-  float: right;
+#the-team {
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
 }
