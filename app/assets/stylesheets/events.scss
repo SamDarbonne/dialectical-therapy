@@ -20,6 +20,12 @@ $brown-gray-color: rgba(108,108,105, 0.95);
      height: 0;
 }
 
+#show-event-div {
+  overflow-y: scroll;
+  height: 330px;
+  margin-bottom: 0;
+}
+
 textarea:focus {
 	background-color: rgb(240, 240, 240);
 	color: rgb(50, 50, 50);
@@ -49,6 +55,7 @@ h4 {
 		padding: 5%;
 		background-color: white;
 	}
+
 	.new-event-button {
 		color: white;
 	}
@@ -58,6 +65,7 @@ h4 {
   #events-container {
     width: auto;
   }
+
   .bold {
     color: black;
     font-weight: bolder;
