@@ -63,6 +63,7 @@ class UsersController < ApplicationController
     @user = User.find_by(user_name: params[:user_name])
     user_events = @user.events
     @events = user_events
+    user_before_data = user_events.find_by(:before)
   end
 
   private
