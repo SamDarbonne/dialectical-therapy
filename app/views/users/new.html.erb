@@ -10,6 +10,7 @@
 				<%= f.input :user_name, :as => :string %>
 				<%= f.input :email, :as => :string, :type => :email  %>
 			  <%= f.input :password %>
+			  <%= f.input :is_prof, :as => :hidden, :input_html => { :value => false } %>
 			  <%= f.button :submit %>
 			<% end %>
 		</div>
