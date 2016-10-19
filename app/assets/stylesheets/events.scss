@@ -10,9 +10,7 @@ $brown-gray-color: rgba(108,108,105, 0.95);
 
 
 
-.btn {
-  background-color: $primary-color !important;
-}
+
 
 
 #overflow-section {
@@ -121,7 +119,7 @@ h3, p {
   text-align: center;
   height: 1.5rem;
   background-color: $primary-color;
-  color: $darker-primary;
+  color: white;
   padding: 0.25rem 0.5rem;
   display: inline-block;
   -webkit-user-select: none;

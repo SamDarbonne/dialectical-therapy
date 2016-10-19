@@ -39,11 +39,23 @@ section {
     float: right;
     width: 75%;
     height: 93vh;
+    overflow-y: scroll;
     background-color: $primary-color;
 }
 
 #navbar {
     background-color: #6c6c69;
+    a {
+       font-size: 2em;
+     }
+}
+
+.app-name {
+  margin-left: 2em;
+  font-size: 2em;
+  a {
+   font-style: italic;
+   }
 }
 
 .aside-image {
@@ -51,7 +63,9 @@ section {
     width: 100vw;
 }
 
-
+.btn {
+  background-color: $blue-color !important;
+}
 
 .btn a {
     color: white;
@@ -145,4 +159,3 @@ aside {
     }
 
 }
-
