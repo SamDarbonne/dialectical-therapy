@@ -33,6 +33,7 @@
       <div class="form_two row form-box hidden" id="form-two">
         <div class="col-m4 offset-m2">
           <label>How did you feel before?</label>
+          <span class="label">(manageable)</span>
           <a href="" class="disabled before-feeling" id="before-0"><div class="number-box">0</div></a>
           <a href="" class="disabled before-feeling" id="before-1"><div class="number-box">1</div></a>
           <a href="" class="disabled before-feeling" id="before-2"><div class="number-box">2</div></a>
@@ -44,10 +45,12 @@
           <a href="" class="disabled before-feeling" id="before-8"><div class="number-box">8</div></a>
           <a href="" class="disabled before-feeling" id="before-9"><div class="number-box">9</div></a>
           <a href="" class="disabled before-feeling" id="before-10"><div class="number-box">10</div></a>
+          <span class="label">(overwhelming)</span>
           <br><br>
           <%= f.input :before, :as => :hidden, :input_html => { :class => "before-input" } %>
           <%= f.input :before_notes, label: "Describe the intensity of your feelings.", placeholder: "(optional)" %>
           <label>How did you feel after?</label>
+          <span class="label">(manageable)</span>
           <a href="" class="disabled after-feeling" id="after-0"><div class="number-box">0</div></a>
           <a href="" class="disabled after-feeling" id="after-1"><div class="number-box">1</div></a>
           <a href="" class="disabled after-feeling" id="after-2"><div class="number-box">2</div></a>
@@ -59,6 +62,7 @@
           <a href="" class="disabled after-feeling" id="after-8"><div class="number-box">8</div></a>
           <a href="" class="disabled after-feeling" id="after-9"><div class="number-box">9</div></a>
           <a href="" class="disabled after-feeling" id="after-10"><div class="number-box">10</div></a>
+          <span class="label">(overwhelming)</span>
           <br><br>
           <%= f.input :after, :as => :hidden, :input_html => { :class => "after-input" } %>
           <%= f.input :after_notes, label: "Describe how your feelings changed.", placeholder: "(optional)" %>
