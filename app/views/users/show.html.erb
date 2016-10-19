@@ -9,12 +9,12 @@
 		<div class="row">
 			<div class="form-box clearfix">
 				<div id="events-container" class="col s6">
-					<% if @user.id == current_user.id %>
+					<% if !@user.is_prof && current_user == @user  %>
 						<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
-					<% end %>
 
 					<h3><%= @user.professional_id && current_user.id == @user.professional_id ? @user.first_name + "'s" : "Your"  %> Entries</h3>
 					<div id="nav"><%= paginate @events if @events %></div>
+					<% end %>
 	        <ul>
 	          <% for event in @events %>
 	            <li id="event-lists">
