@@ -5,13 +5,9 @@ $(document).on('turbolinks:load', function(){
 		event.preventDefault()
 	})
 
-	beforeValue = $($('.before-input')[0]).attr('value');
-	$($('#before-' + String(beforeValue)).children()[0]).removeClbss('number-box');
-	$($('#before-' + String(beforeValue)).children()[0]).addClass('number-box-reversed');
-
-	afterValue = $($('.after-input')[0]).attr('value');
-	$($('#after-' + String(afterValue)).children()[0]).removeClass('number-box');
-	$($('#after-' + String(afterValue)).children()[0]).addClass('number-box-reversed');
+	// grab value of how user was feeling before and after event and highlight those values
+	setFeelingValuesOnLoad('before')
+	setFeelingValuesOnLoad('after')
 
 	// grab boolean values for each of the reasons and if true, highlight that reason button
 	highlightReasonsOnLoad(1);
@@ -104,4 +100,10 @@ function highlightReasonsOnLoad(number) {
 		$($('#checkbox-' + number).children()[0]).toggleClass('checkbox-active')
 		$($('#checkbox-' + number).children()[0]).toggleClass('checkbox')
 	}
+}
+
+function setFeelingValuesOnLoad(timeOfValue) {
+	value = $($('.' + timeOfValue + '-input')[0]).attr('value');
+	$($('#' + timeOfValue + '-' + String(value)).children()[0]).removeClass('number-box');
+	$($('#' + timeOfValue + '-' + String(value)).children()[0]).addClass('number-box-reversed');
 }
