@@ -7,7 +7,7 @@ $(document).on('turbolinks:load', function() {
 	$('#welcome-sign-in-button').on('click', function() {
 		$('#welcome-home-box').addClass('hidden');
 		$('#welcome-sign-in-box').toggleClass('hidden')
-		$('#welcome-sign-in-box').addClass('animated fadeIn');
+		$('#prof-sign-in-box').addClass('animated fadeIn');
 	})
 })
 
