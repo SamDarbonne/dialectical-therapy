@@ -4,7 +4,6 @@ class User < ApplicationRecord
   has_many :patients, class_name: "User", foreign_key: "professional_id"
   belongs_to :professional, class_name: "User", optional: true
 
-
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, uniqueness: true, presence: true

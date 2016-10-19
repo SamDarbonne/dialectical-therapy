@@ -1,1 +1,6 @@
-this is a users data view
+<h4><%= @user.first_name %> <%= @user.last_name %></h4>
+
+<p>On a scale of 1 - 10, before I felt like:</p>
+<%= bar_chart @events.group(:before).average(:before) %>
+<p>On a scale of 1 - 10, after I felt like:</p>
+<%= bar_chart @events.group(:after).average(:after) %>

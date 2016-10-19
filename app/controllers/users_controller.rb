@@ -60,7 +60,9 @@ class UsersController < ApplicationController
   end
 
   def data
-    
+    @user = User.find_by(user_name: params[:user_name])
+    user_events = @user.events
+    @events = user_events
   end
 
   private
