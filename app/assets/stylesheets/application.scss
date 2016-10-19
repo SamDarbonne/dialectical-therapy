@@ -145,11 +145,21 @@ aside {
   aside {
     display: none !important;
   }
+
   .container {
     margin: 0;
   }
+
   .form-box {
     margin: 0;
+  }
+  
+  #navbar {
+    display: none;
+  }
+
+  nav {
+    display: none;
   }
 }
 

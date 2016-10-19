@@ -14,3 +14,4 @@
 .DS_store
 /app/assets/secretkeys.txt
 /app/assets/secretkeys.rb
+bio.txt
