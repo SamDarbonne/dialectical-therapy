@@ -19,6 +19,11 @@ h4 {
 	color: white;
 	text-align: center;
 }
+
+h5 {
+	color: $brown-gray-color;
+}
+
 nav.pagination {
 	background-color: $brown-gray-color;
 	text-align: center;
@@ -44,8 +49,8 @@ nav.pagination {
 		font-size: 2em;
 	}
   #events-container {
-    width: auto;
 		display: inline-block;
+		overflow-x: hidden;
   }
 }
 
@@ -72,4 +77,5 @@ h3, p {
 
 #prof-container{
 	display: inline-block;
+	text-align: center;
 }

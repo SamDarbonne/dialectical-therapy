@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
 Event.destroy_all
+User.destroy_all
 
 users = User.create([
   {
@@ -75,5 +75,21 @@ events = Event.create([
     reflection: "i wish i took a walk after the argument instead",
     victory: "i told my boyfriend how i felt",
     user_id: 1
+  },
+  {
+    behavior: "I ate a hot dog",
+    trigger: "Saw a man with a hot dog",
+    before: 8,
+    before_notes: "I really wanted a hot dog like that man was eating",
+    after: 9,
+    after_notes: "I was full from the hot dog that I ate, and ashamed of my hot dog eating.",
+    distraction: false,
+    soothing: true,
+    improving: false,
+    helpful: "It made me feel good to eat a hot dog, as I love hot dogs.",
+    hurtful: "I felt like I had no control over my life because every time I see someone else with a hot dog I just can not help myself from getting a hot dog.",
+    reflection: "My boss was really upset at me for being an hour late to work because I was waiting for my BART train to work when I saw the man with the hot dog.",
+    victory: "I walked the two blocks to the hot dog store instead of calling an Uber.",
+    user_id: 3
   }
   ])
