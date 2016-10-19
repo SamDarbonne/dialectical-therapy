@@ -25,90 +25,92 @@ $transparent: rgba(0, 0, 0, 0);
 
 @media (min-width: 600px) {
 
-    aside {
-        float: left;
-        width: 24%;
-        height: 93vh;
-        background-image: url("http://imgur.com/a/itE8G");
-    }
+  aside {
+      float: left;
+      width: 24%;
+      height: 93vh;
+      background-image: url("http://imgur.com/a/itE8G");
+  }
 
-    body {
-        font-family: 'Open Sans', sans-serif;
-        background-image: url("http://imgur.com/a/itE8G");
-        max-height: 100%;
-    }
+  body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("http://imgur.com/a/itE8G");
+      max-height: 100%;
+  }
 
-    nav a {
-        color: white;
-    }
+  section {
+      float: right;
+      width: 75%;
+      height: 93vh;
+      background-color: $primary-color;
+  }
 
-    section {
-        float: right;
-        width: 75%;
-        height: 93vh;
-        background-color: $primary-color;
-    }
+  #navbar {
+      background-color: $brown-gray-color;
+      a {
+        font-size: 2em;
+      }
+  }
 
-    #navbar {
-        background-color: #6c6c69;
-    }
+  .aside-image {
+      height: 100%;
+      width: 100vw;
+  }
 
-    .aside-image {
-        height: 100%;
-        width: 100vw;
-    }
+  .back_next_button {
 
-    .back_next_button {
+  }
+  .btn a {
+      color: white;
+  }
 
-    }
-    .btn a {
-        color: white;
-    }
+  .app-name {
+      margin-left: 2em;
+      font-size: 2em;
+      a {
+        font-style: italic;
+      }
+  }
 
-    .brand-logo {
-        margin-left: 15px;
-    }
+  .centered {
+      text-align: center;
+  }
 
-    .centered {
-        text-align: center;
-    }
+  .form-box {
+      margin: 10vh auto;
+      padding: 50px;
+      background-color: white;
+      border-radius: 0.1rem;
+  }
 
+  .hidden {
+      display: none;
+  }
 
-    .form-box {
-        margin: 10vh auto;
-        padding: 50px;
-        background-color: white;
-        border-radius: 0.1rem;
-    }
+  .last-nav {
+      margin-right: 15px;
+  }
 
-    .hidden {
-        display: none;
-    }
+  .number-selection {
+      padding: 0 -5px;
+      width: 1rem
+  }
 
-    .last-nav {
-        margin-right: 15px;
-    }
+  .spaced-btn {
+      margin: 0 0.5rem;
+  }
 
-    .number-selection {
-        padding: 0 -5px;
-        width: 1rem
-    }
+  .tab {
+      background-color: $transparent;
+  }
 
-    .spaced-btn {
-        margin: 0 0.5rem;
-    }
+  .tab .active {
+      background-color: $primary-color;
+  }
 
-    .tab {
-        background-color: $transparent;
-    }
-
-    .tab .active {
-        background-color: $primary-color;
-    }
-
-    .white-tainer {
-        background-color: white;
-    }
+  .white-tainer {
+      background-color: white;
+  }
 }
 
 @media (max-width: 500px) {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Formopoly</title>
+    <title>Within Reach Recovery App</title>
 
     <%= csrf_meta_tags %>
 
@@ -21,9 +21,9 @@
     <nav class="top-nav" id="navbar">
       <div class="nav-wrapper">
         <% if current_user %>
-        <%= link_to "Formopoly", user_path(current_user.user_name), class: "brand-logo" %>
+        <span class="app-name"><%= link_to "Within Reach", user_path(current_user.user_name), class: "brand-logo" %></span>
         <% else %>
-          <%= link_to "Formopoly", root_path, class: "brand-logo" %>
+          <span class="app-name"><%= link_to "Within Reach", root_path, class: "brand-logo" %></span>
           <% end %>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if current_user %>
