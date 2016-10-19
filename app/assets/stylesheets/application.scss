@@ -22,7 +22,7 @@ $secondary-color: rgba(220, 200, 250, 0.95);
 $blue-color: rgba(132, 154, 187, 0.95);
 $brown-gray-color: rgba(108, 108, 105, 0.95);
 $transparent: rgba(0, 0, 0, 0);
-
+$greyed-out-text: #a09fa0;
 
 
 body {
@@ -79,6 +79,11 @@ section {
 
 .indicator {
     background-color: black;
+}
+
+.label {
+  font-size: 8;
+  color: $greyed-out-text;
 }
 
 .last-nav {

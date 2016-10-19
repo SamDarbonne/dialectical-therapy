@@ -15,8 +15,8 @@ $(document).on('turbolinks:load', function(){
 	highlightReasonsOnLoad(3);
 
 	// set radio buttons for how user was feeling before and after event
-	radioButtons('before-feeling', 'before-input', 1, 11);
-	radioButtons('after-feeling', 'after-input', 17, 27);
+	radioButtons('before-feeling', 'before-input', 2, 12);
+	radioButtons('after-feeling', 'after-input', 19, 30);
 
 
 	//list all of our toggle buttons
