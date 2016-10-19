@@ -6,38 +6,40 @@
 <section>
 
 		<h4><%= @user.first_name %> <%= @user.last_name %></h4>
-    <div class="row animated fadeIn">
-      <div class="form-box clearfix">
-        <div id="events-container" class="col s6">
-          <% if @user.id == current_user.id %>
-					<%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new', class: 'btn', id: 'new-event-button' %>
-					<% end %>
-					<h3><%= @user.professional_id && current_user.id == @user.professional_id ? @user.first_name + "'s" : "Your"  %> Entries</h3>
-					<div id="nav"><%= paginate @events if @events %></div>
-	        <ul>
-	          <% for event in @events %>
-	            <li id="event-lists">
-	              <p>
-	                <%= link_to event.created_at.strftime("%b. %d, %Y"), '/users/' + @user.user_name + '/events/' + event.id.to_s %><br>
-									Triggering Event: <%= truncate(event.trigger) %><br>
-									Behavior: <%= truncate(event.behavior) %>
-								</p>
-	            </li>
-	            <hr>
-	          <% end %>
-	        </ul>
-	      </div>
-				<div class="col s6" id="#prof-container">
-					<% if !@user.professional && !@user.is_prof %>
-					<p>You aren't sharing with a professional yet. If your doctor is listed below, you may select them to share your events with.</p>
-					<%= simple_form_for @user, url: '/users/' + @user.user_name, method: 'patch' do |f| %>
-						<%= f.input :professional_id, collection: @profs %>
-						<%= f.button :submit, 'Choose' %>
-					<% end %>
-					<% elsif !@user.is_prof && current_user == @user %>
-						<h5> Your professional is <%= User.find_by_id(@user.professional_id).first_name + " " + User.find_by_id(@user.professional_id).last_name %> </h5>
-					<% end %>
-					<%= render partial: "admin_show" if @user.is_prof? %>
+		<div class="container">
+	    <div class="row animated fadeIn">
+	      <div class="form-box clearfix">
+	        <div id="events-container" class="col s6">
+	          <% if @user.id == current_user.id %>
+						<%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new', class: 'btn', id: 'new-event-button' %>
+						<% end %>
+						<h3><%= @user.professional_id && current_user.id == @user.professional_id ? @user.first_name + "'s" : "Your"  %> Entries</h3>
+						<div id="nav"><%= paginate @events if @events %></div>
+		        <ul>
+		          <% for event in @events %>
+		            <li id="event-lists">
+		              <p>
+		                <%= link_to event.created_at.strftime("%b. %d, %Y"), '/users/' + @user.user_name + '/events/' + event.id.to_s %><br>
+										Triggering Event: <%= truncate(event.trigger) %><br>
+										Behavior: <%= truncate(event.behavior) %>
+									</p>
+		            </li>
+		            <hr>
+		          <% end %>
+		        </ul>
+		      </div>
+					<div class="col s6" id="#prof-container">
+						<% if !@user.professional && !@user.is_prof %>
+						<p>You aren't sharing with a professional yet. If your doctor is listed below, you may select them to share your events with.</p>
+						<%= simple_form_for @user, url: '/users/' + @user.user_name, method: 'patch' do |f| %>
+							<%= f.input :professional_id, collection: @profs %>
+							<%= f.button :submit, 'Choose' %>
+						<% end %>
+						<% elsif !@user.is_prof && current_user == @user %>
+							<h5> Your professional is <%= User.find_by_id(@user.professional_id).first_name + " " + User.find_by_id(@user.professional_id).last_name %> </h5>
+						<% end %>
+						<%= render partial: "admin_show" if @user.is_prof? %>
+					</div>
 				</div>
 			</div>
 		</div>
