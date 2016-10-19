@@ -29,7 +29,7 @@
 		          <% end %>
 		        </ul>
 		      </div>
-					<div class="col s6" id="#prof-container">
+					<div class="col <%= @user.is_prof && @user == current_user ? 's8 offset-s3' : 's6'%>" id="#prof-container">
 						<% if !@user.professional && !@user.is_prof %>
 						<p>You aren't sharing with a professional yet. If your doctor is listed below, you may select them to share your events with.</p>
 						<%= simple_form_for @user, url: '/users/' + @user.user_name, method: 'patch' do |f| %>

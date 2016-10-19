@@ -1,10 +1,10 @@
-<h5> My patients: </h5>
+<h2> My patients: </h2>
 <% if !@user.patients.empty? %>
 	<ul>
 		<% for user in @user.patients %>
-			<li>
+			<li><h5>
 			<%= link_to user.first_name, '/users/' + user.user_name %>
-			</li>
+		</h5></li>
 		<% end %>
 	</ul>
 <% else %>
