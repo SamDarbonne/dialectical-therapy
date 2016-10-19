@@ -24,7 +24,41 @@ $brown-gray-color: rgba(108,108,105, 0.95);
   }
 }
 
+#app-bullets {
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em;
+  background-color: $blue-color;
+  color: white;
+  text-align: center;
+  li {
+    display: inline;
+    font-size: 3em;
+    text-shadow: 4px 4px 4px $brown-gray-color;
+  }
+}
+
+#pull-quote-div {
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em;
+  background-color: $blue-color;
+  color: white;
+  #pull-quote {
+    text-align: center;
+    color: white;
+  }
+  #attribution-div {
+    padding: 2em;
+  }
+  .attribution {
+    font-style: italic;
+    float: right;
+  }
+}
+
 #about-container {
+  margin-top: 0.5em;
   background-color: white;
   h2 {
     font-size: 2em;
@@ -32,7 +66,15 @@ $brown-gray-color: rgba(108,108,105, 0.95);
   img {
     background-color: black;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
   }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

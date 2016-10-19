@@ -8,6 +8,9 @@ $darker-primary: rgb(104, 58, 184);
 $blue-color: rgba(132,154,187, 0.95);
 $brown-gray-color: rgba(108,108,105, 0.95);
 
+#overflow-section {
+  overflow-y: 93vh;
+}
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -15,9 +18,13 @@ $brown-gray-color: rgba(108,108,105, 0.95);
      content: " ";
      clear: both;
      height: 0;
-     }
+}
 
-
+#show-event-div {
+  overflow-y: scroll;
+  height: 330px;
+  margin-bottom: 0;
+}
 
 textarea:focus {
 	background-color: rgb(240, 240, 240);
@@ -33,9 +40,9 @@ textarea:focus {
   color: $secondary-color;
   padding: 0.2rem;
   display: inline-block;
-  -webkit-user-select: none;       
-  -moz-user-select: none; 
-  -ms-user-select: none;   
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 h4 {
 	color: white;
@@ -48,6 +55,7 @@ h4 {
 		padding: 5%;
 		background-color: white;
 	}
+
 	.new-event-button {
 		color: white;
 	}
@@ -57,6 +65,7 @@ h4 {
   #events-container {
     width: auto;
   }
+
   .bold {
     color: black;
     font-weight: bolder;
@@ -95,9 +104,9 @@ h3, p {
   color: $darker-primary;
   padding: 0.2rem;
   display: inline-block;
-  -webkit-user-select: none;       
-  -moz-user-select: none; 
-  -ms-user-select: none;   
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .checkbox {
 
@@ -107,9 +116,9 @@ h3, p {
   color: $darker-primary;
   padding: 0.25rem 0.5rem;
   display: inline-block;
-  -webkit-user-select: none;       
-  -moz-user-select: none; 
-  -ms-user-select: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .checkbox-active {
 
@@ -119,14 +128,13 @@ h3, p {
   color: $primary-color;
   padding: 0.25rem 0.5rem;
   display: inline-block;
-  -webkit-user-select: none;       
-  -moz-user-select: none; 
-  -ms-user-select: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 @media (max-width: 600px) {
   .section {
-    
+
   }
 }
-
