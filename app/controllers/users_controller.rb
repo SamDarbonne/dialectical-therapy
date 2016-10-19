@@ -59,6 +59,10 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def data
+    
+  end
+
   private
   def user_params
     params.require(:user).permit(:user_name, :first_name, :last_name, :email, :professional_id, :is_prof, :password)

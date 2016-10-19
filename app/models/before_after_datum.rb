@@ -1,0 +1,2 @@
+class BeforeAfterDatum < ApplicationRecord
+end

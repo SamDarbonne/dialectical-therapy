@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   patch '/users/:user_name/events/:id', to: 'events#update'
   delete '/users/:user_name/events/:id', to: 'events#destroy'
 
+  get '/users/:user_name/before_after_data', to: 'users#data', as: "show_user_data"
+
 end
