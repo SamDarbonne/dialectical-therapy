@@ -5,15 +5,15 @@ $(document).on('turbolinks:load', function(){
 		event.preventDefault()
 	})
 
-	a = $($('.before-input')[0]).attr('value');
-	console.log(a);
-	$($('#before-' + String(a)).children()[0]).removeClass('number-box');
-	$($('#before-' + String(a)).children()[0]).addClass('number-box-reversed');
+	beforeValue = $($('.before-input')[0]).attr('value');
+	$($('#before-' + String(beforeValue)).children()[0]).removeClbss('number-box');
+	$($('#before-' + String(beforeValue)).children()[0]).addClass('number-box-reversed');
 
-	b = $($('.after-input')[0]).attr('value');
-	$($('#after-' + String(a)).children()[0]).removeClass('number-box');
-	$($('#after-' + String(a)).children()[0]).addClass('number-box-reversed');
+	afterValue = $($('.after-input')[0]).attr('value');
+	$($('#after-' + String(afterValue)).children()[0]).removeClass('number-box');
+	$($('#after-' + String(afterValue)).children()[0]).addClass('number-box-reversed');
 
+	// grab boolean values for each of the reasons and if true, highlight that reason button
 	highlightReasonsOnLoad(1);
 	highlightReasonsOnLoad(2);
 	highlightReasonsOnLoad(3);
