@@ -1,6 +1,14 @@
 <h4><%= @user.first_name %> <%= @user.last_name %></h4>
 
-<p>On a scale of 1 - 10, before I felt like:</p>
-<%= bar_chart @events.group(:before).average(:before) %>
-<p>On a scale of 1 - 10, after I felt like:</p>
-<%= bar_chart @events.group(:after).average(:after) %>
+<div class="container data-container">
+  <div class="row">
+    <div class="col s8">
+      <h3>Emotion Regulation</h3>
+      <p>A key component of dialectical behavior therapy is emotion regulation. During recovery, patients are taught how to manage negative and overwhelming emotions while increasing positive ones. The first goal of this skill is to understand one's emotions.</p>
+      <p>On a scale of 1 - 10, before I felt like:</p>
+      <div><%= bar_chart @events.group(:before).average(:before), colors: ["#849ABB"] %></div>
+      <p>On a scale of 1 - 10, after I felt like:</p>
+      <div><%= bar_chart @events.group(:after).average(:after), colors: ["#849ABB"] %></div>
+    </div>
+  </div>
+</div>

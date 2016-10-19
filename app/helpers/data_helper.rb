@@ -1,23 +1,10 @@
 module DataHelper
 
-  def data
-    bar_chart show_user_data_path, library: {
-        yAxis: {
-            crosshair: true,
-            title: {
-                text: 'Competitions count'
-            }
-        },
-        xAxis: {
-            crosshair: true,
-            title: {
-                text: 'Year'
-            }
-        }
-    }
-  end
+  x_range = 0..10
 
-
-
+  library_options = {
+    width: 600,
+    hAxis: {ticks: x_range.to_a},
+  }
 
 end
