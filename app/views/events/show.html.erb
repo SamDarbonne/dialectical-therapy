@@ -8,7 +8,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="form-box clearfix">
+			<div class="form-box clearfix"  id="show-event-div">
 				<div id="events-container" class="col s6">
 					<div class="event-buttons">
 						<a class="waves-effect waves-light btn" id="edit-event-button"><%= button_to 'Edit Event', edit_event_path(@user.user_name, @event), {method: 'get'} %></a>
