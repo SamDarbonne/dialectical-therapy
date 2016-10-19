@@ -7,29 +7,32 @@ $secondary-color: rgba(196,178,228, 0.95);
 $blue-color: rgba(132,154,187, 0.95);
 $brown-gray-color: rgba(108,108,105, 0.95);
 
-h1, h3 {
-  text-align: center;
-  color: white;
-  text-shadow: 4px 4px 4px $brown-gray-color;
+#about-page{
+  h1, h3 {
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 4px $brown-gray-color;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 3em;
+  }
+  h4 {
+    color: $brown-gray-color;
+  }
 }
-h2 {
-  font-size: 1em;
-}
-h3 {
-  font-size: 3em;
-}
-h4 {
-  color: $brown-gray-color;
-}
-img {
-  background-color: black;
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-}
-.container {
+
+#about-container {
   background-color: white;
   h2 {
     font-size: 2em;
+  }
+  img {
+    background-color: black;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
   }
 }
