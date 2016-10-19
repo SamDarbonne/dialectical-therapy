@@ -7,17 +7,28 @@ $blue-color: rgba(132,154,187, 0.95);
 $brown-gray-color: rgba(108,108,105, 0.95);
 
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
 
 h4 {
 	color: white;
 	text-align: center;
+}
+nav.pagination {
+	background-color: $brown-gray-color;
+	text-align: center;
+	max-height: 3em;
+	max-width: inherit;
+	position: relative;
+	span{
+		position: relative;
+	  top: -25%;
+	}
 }
 
 .container {
@@ -34,8 +45,10 @@ h4 {
 	}
   #events-container {
     width: auto;
+		display: inline-block;
   }
 }
+
 .event-lists {
 	a:link, a:visited {
 		color: $brown-gray-color;
@@ -47,13 +60,17 @@ ul {
 
 h3, p {
 	color: $brown-gray-color;
- }
+}
 
 #new-event-button {
 	background-color: $blue-color;
   color: white;
-  display: inline-block;
+  display: inline;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+#prof-container{
+	display: inline-block;
 }

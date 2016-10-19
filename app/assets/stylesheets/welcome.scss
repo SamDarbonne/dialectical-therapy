@@ -2,3 +2,109 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$primary-color: rgba(136,118,168, 0.95);
+$secondary-color: rgba(196,178,228, 0.95);
+$blue-color: rgba(132,154,187, 0.95);
+$brown-gray-color: rgba(108,108,105, 0.95);
+
+.welcome-box {
+  h3 {
+    color: black;
+    font-size: 3em;
+  }
+  h4 {
+    color: $brown-gray-color;
+    font-size: 1.5em;
+  }
+}
+#splash-button-nav {
+  display:block;
+  margin:auto;
+  .spaced-btn {
+    display: inline;
+    margin: 1em;
+    background-color: $blue-color;
+  }
+}
+
+#about-page{
+  h1, h3 {
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 4px $brown-gray-color;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 3em;
+  }
+  h4 {
+    color: $brown-gray-color;
+  }
+}
+
+#app-bullets {
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em;
+  background-color: $blue-color;
+  color: white;
+  text-align: center;
+  li {
+    display: inline;
+    font-size: 3em;
+    text-shadow: 4px 4px 4px $brown-gray-color;
+  }
+}
+
+#pull-quote-div {
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em;
+  background-color: $blue-color;
+  color: white;
+  #pull-quote {
+    text-align: center;
+    color: white;
+  }
+  #attribution-div {
+    padding-bottom: 2em;
+  }
+  .attribution {
+    font-style: italic;
+    float: right;
+  }
+}
+
+#about-container {
+  margin-top: 0.5em;
+  background-color: white;
+  h2 {
+    font-size: 2em;
+  }
+  h4 {
+    color: $brown-gray-color;
+  }
+  .team-image {
+    border-radius: 1em;
+    // border-color: $brown-gray-color;
+    // border-width: 1em;
+    height: 150px;
+    display:block;
+    margin:auto;
+  }
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.left {
+  float: left;
+}
