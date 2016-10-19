@@ -1,5 +1,5 @@
 <aside>
-<%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "booger") %>
+<%= image_tag("http://i.imgur.com/aT2G7y7.jpg", class: "aside-image", alt: "hills-landscape") %>
 </aside>
 <section>
 <div class="container">
@@ -12,10 +12,12 @@
 			<% end %>
 		</div>
 		<div class="welcome-box form-box animated fadeIn" id="welcome-home-box">
-			<h1 class="centered">We're here to help.</h1>
-			<button class="btn spaced-btn" id="welcome-get-info-button">Learn More</button><button class="btn spaced-btn" id="welcome-get-started-button"><%= link_to 'Patient Sign Up', '/users/new' %></button><button class="btn spaced-btn centered" id="prof-sign-in-button"><%= link_to 'Professional Sign Up', '/users/new?professionals' %></button>
+			<h3 class="centered">Simplify Your Recovery.</h3>
+			<h4>A step-by-step tool based on techniques clinically-proven to aid patients suffering from eating disorders and other mental health disorders.</h4>
+			<div id="splash-button-nav">
+				<button class="btn spaced-btn centered" id="welcome-get-info-button"><%= link_to 'About', '/about' %></button><button class="btn spaced-btn centered" id="welcome-get-started-button"><%= link_to 'For Patients', '/users/new' %></button><button class="btn spaced-btn centered" id="prof-sign-in-button"><%= link_to 'For Professionals', '/users/new?professionals' %></button>
+			</div>
 		</div>
 	</div>
 </div>
 </section>
-

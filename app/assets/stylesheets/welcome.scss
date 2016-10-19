@@ -7,6 +7,26 @@ $secondary-color: rgba(196,178,228, 0.95);
 $blue-color: rgba(132,154,187, 0.95);
 $brown-gray-color: rgba(108,108,105, 0.95);
 
+.welcome-box {
+  h3 {
+    color: black;
+    font-size: 3em;
+  }
+  h4 {
+    color: $brown-gray-color;
+    font-size: 1.5em;
+  }
+}
+#splash-button-nav {
+  display:block;
+  margin:auto;
+  .spaced-btn {
+    display: inline;
+    margin: 1em;
+    background-color: $blue-color;
+  }
+}
+
 #about-page{
   h1, h3 {
     text-align: center;
