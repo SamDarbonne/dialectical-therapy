@@ -19,14 +19,19 @@ h4 {
 	color: white;
 	text-align: center;
 }
+nav.pagination {
+	background-color: $brown-gray-color;
+	text-align: center;
+	max-height: 3em;
+	max-width: inherit;
+	position: relative;
+	span{
+		position: relative;
+	  top: -25%;
+	}
+}
 
 .container {
-  nav.pagination {
-    background-color: $brown-gray-color;
-    text-align: center;
-    max-height: 3em;
-    max-width: inherit;
-  }
 	.form-box {
 		margin: 5% auto;
 		padding: 5%;
