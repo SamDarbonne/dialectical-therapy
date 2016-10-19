@@ -51,9 +51,8 @@ section {
     width: 100vw;
 }
 
-.back_next_button {
 
-}
+
 .btn a {
     color: white;
 }
@@ -78,6 +77,10 @@ section {
     display: none;
 }
 
+.indicator {
+    background-color: black;
+}
+
 .last-nav {
     margin-right: 15px;
 }
@@ -97,6 +100,7 @@ section {
 
 .tab .active {
     background-color: $primary-color;
+    color: white !important;
 }
 
 .white-tainer {
@@ -133,4 +137,11 @@ section {
         background-image: url("http://imgur.com/a/itE8G");
     }
 
+}
+
+
+.johnny {
+  background-color: white;
+  width: 25%;
+  display: inline-block;
 }

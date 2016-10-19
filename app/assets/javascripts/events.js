@@ -5,6 +5,19 @@ $(document).on('turbolinks:load', function(){
 		event.preventDefault()
 	})
 
+	a = $($('.before-input')[0]).attr('value');
+	console.log(a);
+	$($('#before-' + String(a)).children()[0]).removeClass('number-box');
+	$($('#before-' + String(a)).children()[0]).addClass('number-box-reversed');
+
+	b = $($('.after-input')[0]).attr('value');
+	$($('#after-' + String(a)).children()[0]).removeClass('number-box');
+	$($('#after-' + String(a)).children()[0]).addClass('number-box-reversed');
+
+	highlightReasonsOnLoad(1);
+	highlightReasonsOnLoad(2);
+	highlightReasonsOnLoad(3);
+
 	// set radio buttons for how user was feeling before and after event
 	radioButtons('before-feeling', 'before-input', 1, 11);
 	radioButtons('after-feeling', 'after-input', 17, 27);
@@ -24,22 +37,24 @@ $(document).on('turbolinks:load', function(){
 	tabClick('tab-four', 'form-four', 'form-one', 'form-two', 'form-three');
 
 	//make the reasons for action clickable
-	reasonToggles('checkbox-1', 'checkbox-2', 'checkbox-3');
-	reasonToggles('checkbox-2', 'checkbox-1', 'checkbox-3');
-	reasonToggles('checkbox-3', 'checkbox-1', 'checkbox-2');
+	reasonToggles('checkbox-1');
+	reasonToggles('checkbox-2');
+	reasonToggles('checkbox-3');
 })
 
-function reasonToggles(reasonClicked, reason1ToHide, reason2ToHide) {
+function reasonToggles(reasonClicked) {
 	$('#' + reasonClicked).on('click', function() {
 		text = $(this).text();
-		console.log(text);
-		$($(this).children()[0]).removeClass('checkbox');
-		$($(this).children()[0]).addClass('checkbox-active');
-		$($('#' + reason1ToHide).children()[0]).removeClass('checkbox-active');
-		$($('#' + reason1ToHide).children()[0]).addClass('checkbox');
-		$($('#' + reason2ToHide).children()[0]).removeClass('checkbox-active');
-		$($('#' + reason2ToHide).children()[0]).addClass('checkbox');
-		$('#event_reason').val(text)
+		$($(this).children()[0]).toggleClass('checkbox');
+		$($(this).children()[0]).toggleClass('checkbox-active');
+		value = $('#' + 'input-' + reasonClicked).val();
+		if (value == 'true') {
+			value = false
+		}
+		if (value == 'false') {
+			value = true
+		}
+		$('#' + 'input-' + reasonClicked).attr('value', value);
 	})
 }
 // set the click listener for hiding current form-box and showing the next or previous, for user with
@@ -82,4 +97,11 @@ function radioButtons(feeling, input, start, end) {
 		// sanity check that hidden input field is actually changing
 		console.log($($('.' + input)[0]).attr('value'))
 	})
+}
+
+function highlightReasonsOnLoad(number) {
+	if ($('#input-checkbox-' + number).attr('value') == 'true') {
+		$($('#checkbox-' + number).children()[0]).toggleClass('checkbox-active')
+		$($('#checkbox-' + number).children()[0]).toggleClass('checkbox')
+	}
 }
