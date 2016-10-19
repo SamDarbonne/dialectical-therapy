@@ -10,8 +10,10 @@ $brown-gray-color: rgba(108,108,105, 0.95);
 
 
 
-
-
+#events-container-2{
+  width: auto;
+  display: inline-block;
+}
 
 #overflow-section {
   overflow-y: 93vh;
@@ -68,9 +70,6 @@ h4 {
 	h3 {
 		font-size: 2em;
 	}
-  #events-container {
-    width: auto;
-  }
 
   .bold {
     color: black;
