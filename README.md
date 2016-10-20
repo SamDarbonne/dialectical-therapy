@@ -1,6 +1,6 @@
 #Within Reach
 
-<strong>[Check out Within Reach on Heroku](https://morning-lake-71506.herokuapp.com/)</strong>
+<strong>[Check out Within Reach on Heroku](https://within-reach.herokuapp.com)</strong>
 
 ##About
 <strong>Easy - Accessible - Private</strong>
