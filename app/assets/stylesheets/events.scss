@@ -120,21 +120,6 @@ h3, p {
   -ms-user-select: none;
 }
 
-@media (max-width: 500px) {
-	.number-box {
-	  font-size: 1.5rem;
-	  width: 2rem;
-	  height: 2rem;
-	  padding: 0.25rem;
-	}
-	.number-box-reversed {
-	  font-size: 1.5rem;
-	  width: 2rem;
-	  height: 2rem;
-	  padding: 0.25rem;
-	}
-}
-
 .checkbox {
 
   text-align: center;
@@ -159,3 +144,24 @@ h3, p {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+@media (max-width: 500px) {
+	.number-box, .number-box-reversed {
+	  font-size: 1.5rem;
+	  width: 2rem;
+	  height: 2rem;
+	  padding: 0.25rem;
+	}
+	.checkbox, .checkbox-active {
+		font-size: 1.5rem;
+		height: 2rem;
+		padding: 0.25rem;
+		margin-top: 1rem;
+		display: block;
+		border-radius: 5px;
+	}
+	label {
+		font-size: 1.5rem;
+	}
+}
+
