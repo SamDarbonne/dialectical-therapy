@@ -23,7 +23,7 @@
         <% if current_user %>
         <span class="app-name"><%= link_to "Within Reach", user_path(current_user.user_name), class: "brand-logo" %></span>
         <% else %>
-          <span class="app-name"><%= link_to "Within Reach", root_path, class: "brand-logo" %></span>
+          <span class="app-name"><%= link_to "Within Reach", login_path, class: "brand-logo" %></span>
           <% end %>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if current_user %>
