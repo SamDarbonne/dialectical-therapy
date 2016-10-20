@@ -6,10 +6,11 @@
 <section>
 
 		<h4><%= @user.first_name %> <%= @user.last_name %></h4>
-		<div class="container animate fadeIn">
-			<div class="row">
-				<div class="form-box clearfix">
-					<div id="events-container" class="col s6">
+    <div class="container animate fadeIn">
+      <div class="row">
+        <%= link_to "Log Out", logout_path, class: "btn spaced-btn centered small-view" %>
+        <div class="form-box clearfix">
+          <div id="events-container" class="col s6">
 						<% if !@user.is_prof && current_user == @user  %>
 							<button class="btn" id="new-event-button"><%= link_to 'New Entry', '/users/' + current_user.user_name + '/events/new'%></button>
 
