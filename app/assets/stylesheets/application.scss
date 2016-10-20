@@ -161,10 +161,19 @@ aside {
   nav {
     display: none;
   }
+
+  .small-label {
+    float: right;
+    clear: both;
+  }
 }
 
 
 @media (min-width: 500px) {
+  
+    .small-view {
+      display: none;
+    }
 
     aside {
         float: left;
