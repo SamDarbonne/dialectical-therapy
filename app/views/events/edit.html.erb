@@ -7,12 +7,12 @@
     <!-- Tabs  -->
       <div class="col s12 animated fadeIn">
           <ul class="tabs">
-              
-              
-              <li class="tab col m3 s12"><a class="disabled deep-purple-text active" id="tab-one" href="#tab-activate-one">Part 1</a></li>
-              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-two" href="#tab-activate-two">Part 2</a></li>
-              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-three" href="#tab-activate-three">Part 3</a></li>
-              <li class="tab col m3 s12"><a class="disabled deep-purple-text" id="tab-four" href="#tab-activate-four">Part 4</a></li>
+
+
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text lighten-2 active" id="tab-one" href="#tab-activate-one">Part 1</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text lighten-2" id="tab-two" href="#tab-activate-two">Part 2</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text lighten-2" id="tab-three" href="#tab-activate-three">Part 3</a></li>
+              <li class="tab col m3 s12"><a class="disabled deep-purple-text lighten-2" id="tab-four" href="#tab-activate-four">Part 4</a></li>
 
           </ul>
       </div>
@@ -25,14 +25,16 @@
             <%= f.input :trigger, label: "What was the prompting event?", placeholder: "What happened right before? What may have been the trigger?" %>
             <%= f.input :behavior, label: "Describe what happened.", placeholder: "What was your reaction? What did you do? What was the behavior?" %>
           </div>
-          <div class="back_next_buttons">
-            <%= link_to 'Cancel', user_path(@user.user_name), class: 'btn white-text lighten-2' %>
-            <button id="form-one-next" class="btn white-text lighten-2">Next</button>
+          <div class="back-next-buttons">
+            <%= link_to 'Cancel', '../', class: 'btn white-text' %>
+            <button id="form-one-next" class="btn white-text">Next</button>
           </div>
         </div>
       <div class="form_two row form-box hidden" id="form-two">
         <div class="col-m4 offset-m2">
           <label>How did you feel before?</label>
+          <span class="label">(manageable)</span>
+          <br class="small-view">
           <a href="" class="disabled before-feeling" id="before-0"><div class="number-box">0</div></a>
           <a href="" class="disabled before-feeling" id="before-1"><div class="number-box">1</div></a>
           <a href="" class="disabled before-feeling" id="before-2"><div class="number-box">2</div></a>
@@ -44,10 +46,13 @@
           <a href="" class="disabled before-feeling" id="before-8"><div class="number-box">8</div></a>
           <a href="" class="disabled before-feeling" id="before-9"><div class="number-box">9</div></a>
           <a href="" class="disabled before-feeling" id="before-10"><div class="number-box">10</div></a>
+          <span class="label small-label">(overwhelming)</span>
           <br><br>
-          <%= f.input :before, :as => :hidden, :input_html => {  :class => "before-input" } %>
+          <%= f.input :before, :as => :hidden, :input_html => { :class => "before-input" } %>
           <%= f.input :before_notes, label: "Describe the intensity of your feelings.", placeholder: "(optional)" %>
           <label>How did you feel after?</label>
+          <span class="label">(manageable)</span>
+          <br class="small-view">
           <a href="" class="disabled after-feeling" id="after-0"><div class="number-box">0</div></a>
           <a href="" class="disabled after-feeling" id="after-1"><div class="number-box">1</div></a>
           <a href="" class="disabled after-feeling" id="after-2"><div class="number-box">2</div></a>
@@ -59,8 +64,9 @@
           <a href="" class="disabled after-feeling" id="after-8"><div class="number-box">8</div></a>
           <a href="" class="disabled after-feeling" id="after-9"><div class="number-box">9</div></a>
           <a href="" class="disabled after-feeling" id="after-10"><div class="number-box">10</div></a>
+          <span class="label small-label">(overwhelming)</span>
           <br><br>
-          <%= f.input :after, :as => :hidden, :input_html => {  :class => "after-input" } %>
+          <%= f.input :after, :as => :hidden, :input_html => { :class => "after-input" } %>
           <%= f.input :after_notes, label: "Describe how your feelings changed.", placeholder: "(optional)" %>
         </div>
         <div class="back-next-buttons">
@@ -70,13 +76,13 @@
       </div>
       <div class="form_three row form-box hidden" id="form-three">
         <div class="col-m4 offset-m2">
-          <label>Why did you do what you done did do?</label>
+          <label>Which of the following stressors did the behavior help alleviate?</label>
           <a href="" class="disabled reason-box" id="checkbox-1"><div class="checkbox">Needed a Distraction</div></a>
           <a href="" class="disabled reason-box" id="checkbox-2"><div class="checkbox">Self-Soothing</div></a>
           <a href="" class="disabled reason-box" id="checkbox-3"><div class="checkbox">Improving the Moment</div></a>
-          <%= f.input :distraction, :as => :hidden, :input_html => { :id => "input-checkbox-1" } %>
-          <%= f.input :soothing, :as => :hidden, :input_html => { :id => "input-checkbox-2" } %>
-          <%= f.input :improving, :as => :hidden, :input_html => { :id => "input-checkbox-3" } %>
+          <%= f.input :distraction, :as => :hidden, :input_html => { :value => false, :id => "input-checkbox-1" } %>
+          <%= f.input :soothing, :as => :hidden, :input_html => { :value => false, :id => "input-checkbox-2" } %>
+          <%= f.input :improving, :as => :hidden, :input_html => { :value => false, :id => "input-checkbox-3" } %>
           <br><br>
           <%= f.input :helpful, label: "How did the behavior help you?" %>
           <%= f.input :hurtful, label: "How did the behavior hurt you?" %>

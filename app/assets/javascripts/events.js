@@ -1,10 +1,11 @@
 $(document).on('turbolinks:load', function(){
-  console.log("Ready!");
-	//prevent default behavior for all disabled anchor tags
+  console.log("turbolinks has loaded events.js! let's go!");
+	// prevent default behavior for all disabled anchor tags
 	jQuery('.disabled').on('click', function(event) {
 		event.preventDefault()
 	})
 
+	// prevent form submission on enter keypress
 	$(".no-enter-form").on("keypress", function (e) {
     	if (e.keyCode == 13) {
         	return false;
@@ -71,6 +72,8 @@ function setHiddenToggles(clickedButton, firstBox, secondBox, tabToBe){
 		$('ul.tabs').tabs('select_tab', tabToBe);
 	})
 }
+
+// on clicking a tab, all other forms should be hidden and the form related to the tab should be shown
 function tabClick(clickedTab, boxToShow, box1ToHide, box2ToHide, box3ToHide) {
 	$('#' + clickedTab).on('click', function() {
 		$('#' + box1ToHide).addClass('hidden');
@@ -84,6 +87,7 @@ function tabClick(clickedTab, boxToShow, box1ToHide, box2ToHide, box3ToHide) {
 		}
 	})
 }
+
 // set CSS class of clicked button to highlighted, remove highlighted class from all other buttons,
 //   and sets hidden input field as value of button clicked
 function radioButtons(feeling, input, start, end) {
@@ -101,6 +105,8 @@ function radioButtons(feeling, input, start, end) {
 	})
 }
 
+// on loading an edit form, grab the values of the hidden input 
+//    and make sure those numbers are highlighted
 function highlightReasonsOnLoad(number) {
 	if ($('#input-checkbox-' + number).attr('value') == 'true') {
 		$($('#checkbox-' + number).children()[0]).toggleClass('checkbox-active')
@@ -108,6 +114,8 @@ function highlightReasonsOnLoad(number) {
 	}
 }
 
+// on loading an edit form, grab the values of the hidden inputs 
+//    and make sure those reasons are highlighted
 function setFeelingValuesOnLoad(timeOfValue) {
 	value = $($('.' + timeOfValue + '-input')[0]).attr('value');
 	$($('#' + timeOfValue + '-' + String(value)).children()[0]).removeClass('number-box');
