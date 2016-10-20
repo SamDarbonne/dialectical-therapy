@@ -40,6 +40,7 @@ Mobile-friendly forms:
 ##Planning
 * [Trello](https://trello.com/b/wN9GwKrO/project-2)
 * Wireframes for forms:
+
 ![Alt text](./app/assets/images/form1.jpg)
 
 ![Alt text](./app/assets/images/form2.jpg)
