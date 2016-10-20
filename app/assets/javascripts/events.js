@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function(){
 		event.preventDefault()
 	})
 
-	$("form").on("keypress", function (e) {
+	$(".no-enter-form").on("keypress", function (e) {
     	if (e.keyCode == 13) {
         	return false;
     	}
@@ -22,7 +22,7 @@ $(document).on('turbolinks:load', function(){
 
 	// set radio buttons for how user was feeling before and after event
 	radioButtons('before-feeling', 'before-input', 2, 13);
-	radioButtons('after-feeling', 'after-input', 20, 32);
+	radioButtons('after-feeling', 'after-input', 20, 31);
 
 	//list all of our toggle buttons
 	setHiddenToggles('form-one-next', 'form-one', 'form-two', 'tab-activate-two');
