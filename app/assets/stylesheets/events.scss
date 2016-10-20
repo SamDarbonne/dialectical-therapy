@@ -28,6 +28,10 @@ $brown-gray-color: rgba(108,108,105, 0.95);
      height: 0;
 }
 
+.indicator {
+	background-color: $primary-color !important;
+}
+
 #show-event-div {
   overflow-y: scroll;
   height: 330px;
@@ -40,18 +44,6 @@ textarea:focus {
 	border: none
 }
 
-.number-box {
-  text-align: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: $primary-color;
-  color: $secondary-color;
-  padding: 0.2rem;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
 h4 {
 	color: white;
 	text-align: center;
@@ -101,6 +93,20 @@ h3, p {
   -ms-user-select: none;
 }
 
+
+.number-box {
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 0.2rem;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .number-box-reversed {
   text-align: center;
   width: 1.5rem;
@@ -113,6 +119,22 @@ h3, p {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+@media (max-width: 500px) {
+	.number-box {
+	  font-size: 1.5rem;
+	  width: 2rem;
+	  height: 2rem;
+	  padding: 0.25rem;
+	}
+	.number-box-reversed {
+	  font-size: 1.5rem;
+	  width: 2rem;
+	  height: 2rem;
+	  padding: 0.25rem;
+	}
+}
+
 .checkbox {
 
   text-align: center;
