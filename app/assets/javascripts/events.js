@@ -5,6 +5,12 @@ $(document).on('turbolinks:load', function(){
 		event.preventDefault()
 	})
 
+	$("form").on("keypress", function (e) {
+    	if (e.keyCode == 13) {
+        	return false;
+    	}
+	});
+
 	// grab value of how user was feeling before and after event and highlight those values
 	setFeelingValuesOnLoad('before')
 	setFeelingValuesOnLoad('after')
