@@ -59,6 +59,13 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def data
+    @user = User.find_by(user_name: params[:user_name])
+    user_events = @user.events
+    @events = user_events
+    user_before_data = user_events.find_by(:before)
+  end
+
   private
   def user_params
     params.require(:user).permit(:user_name, :first_name, :last_name, :email, :professional_id, :is_prof, :password)
