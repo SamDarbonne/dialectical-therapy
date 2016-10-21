@@ -16,8 +16,6 @@
 //= require materialize
 //= require turbolinks
 //= require materialize-sprockets
-//= require highcharts/highcharts
-//= require highcharts/highcharts-more
 //= require highcharts/highstock
 //= require Chart.bundle
 //= require chartkick
